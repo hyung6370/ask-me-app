@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/swift,xcode,cocoapods
-# Edit at https://www.toptal.com/developers/gitignore?templates=swift,xcode,cocoapods
+# Created by https://www.toptal.com/developers/gitignore/api/swift,xcode,firebase,cocoapods
+# Edit at https://www.toptal.com/developers/gitignore?templates=swift,xcode,firebase,cocoapods
 
 ### CocoaPods ###
 ## CocoaPods GitIgnore Template
@@ -8,6 +8,15 @@
 #           - Also handy if you have a large number of dependant pods
 #           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
 Pods/
+
+### Firebase ###
+.idea
+**/node_modules/*
+**/.firebaserc
+
+### Firebase Patch ###
+.runtimeconfig.json
+.firebase/
 
 ### Swift ###
 # Xcode
@@ -106,8 +115,9 @@ iOSInjectionProject/
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
-# End of https://www.toptal.com/developers/gitignore/api/swift,xcode,cocoapods
+# End of https://www.toptal.com/developers/gitignore/api/swift,xcode,firebase,cocoapods
 
 
 SecretKey.plist
 Info.plist
+GoogleService-Info.plist

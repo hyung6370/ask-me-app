@@ -1,14 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o94-4o-a23">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GmarketSansTTFLight.ttf">
+            <string>GmarketSansTTFLight</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="sIJ-vw-hPN">
+            <objects>
+                <viewController id="Zcs-nH-pYB" customClass="OnboardingViewController" customModule="STTTTS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bRu-Pi-dgt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="IRS-5O-M28">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask me!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7c-Hv-gZc">
+                                <rect key="frame" x="39.999999999999986" y="233" width="251.66666666666663" height="84"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uto-L5-vto">
+                                <rect key="frame" x="40" y="344" width="320" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="2Mh-BS-FG7"/>
+                                    <constraint firstAttribute="height" constant="45" id="RK0-C9-vNU"/>
+                                </constraints>
+                                <string key="text">This project consists of 'Google STT(Speech To Text) API' and 'OpenAI(Chat GPT) API'. Use "Your word" directly to solve your problems and concerns!</string>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RK7-qe-wpD">
+                                <rect key="frame" x="40" y="539" width="57" height="55"/>
+                                <color key="backgroundColor" red="0.91311889889999998" green="0.6729954481" blue="0.64080774780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQT-Mq-OVZ">
+                                <rect key="frame" x="50" y="549" width="180" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="0dk-Sy-1d0"/>
+                                    <constraint firstAttribute="height" constant="45" id="uCl-fF-Z5c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="15"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" Start talking" image="arrow.forward" catalog="system"/>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="Zcs-nH-pYB" eventType="touchUpInside" id="THw-qQ-Lbq"/>
+                                    <segue destination="2GY-XK-FlT" kind="show" id="5W3-hw-58T"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9J7-Vu-bGC">
+                                <rect key="frame" x="40" y="604" width="300" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="SQ2-Ue-ZYZ"/>
+                                    <constraint firstAttribute="height" constant="75" id="nJp-op-WfQ"/>
+                                </constraints>
+                                <string key="text">The 'Ask me' project is my fourth personal project. The project used Swift, UIKit, CocoaPods, Firebase, Auth, Google STT API and OpenAI (Chat GPT) API. To learn more about this project, visit https://github.com/hyung6370/ask-me-app' !</string>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="직접 '말'로 GPT에게 물어보세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIT-d8-DFn">
+                                <rect key="frame" x="40" y="317" width="320" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="pjp-Gr-IpL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GmarketSansTTFLight" family="Gmarket Sans TTF" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gRb-G3-kc3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gRb-G3-kc3" firstAttribute="bottom" secondItem="wQT-Mq-OVZ" secondAttribute="bottom" constant="224" id="0cV-ns-6bw"/>
+                            <constraint firstItem="zIT-d8-DFn" firstAttribute="top" secondItem="g7c-Hv-gZc" secondAttribute="bottom" id="7X0-jH-D1M"/>
+                            <constraint firstItem="g7c-Hv-gZc" firstAttribute="top" secondItem="gRb-G3-kc3" secondAttribute="top" constant="130" id="9Dr-3a-fb8"/>
+                            <constraint firstItem="Uto-L5-vto" firstAttribute="leading" secondItem="gRb-G3-kc3" secondAttribute="leading" constant="40" id="9lO-dw-GeB"/>
+                            <constraint firstItem="Uto-L5-vto" firstAttribute="top" secondItem="zIT-d8-DFn" secondAttribute="bottom" constant="5" id="Ezj-jM-alP"/>
+                            <constraint firstItem="RK7-qe-wpD" firstAttribute="bottom" secondItem="wQT-Mq-OVZ" secondAttribute="bottom" id="Gpk-Jd-Ic7"/>
+                            <constraint firstItem="RK7-qe-wpD" firstAttribute="leading" secondItem="Uto-L5-vto" secondAttribute="leading" id="LYM-Ag-6aU"/>
+                            <constraint firstItem="gRb-G3-kc3" firstAttribute="trailing" secondItem="RK7-qe-wpD" secondAttribute="trailing" constant="296" id="UA2-GF-TG5"/>
+                            <constraint firstItem="9J7-Vu-bGC" firstAttribute="top" secondItem="RK7-qe-wpD" secondAttribute="bottom" constant="10" id="UVa-vf-nkT"/>
+                            <constraint firstItem="RK7-qe-wpD" firstAttribute="top" secondItem="bRu-Pi-dgt" secondAttribute="top" constant="539" id="XZo-k6-UcL"/>
+                            <constraint firstItem="zIT-d8-DFn" firstAttribute="leading" secondItem="gRb-G3-kc3" secondAttribute="leading" constant="40" id="ZpN-qn-rsR"/>
+                            <constraint firstItem="RK7-qe-wpD" firstAttribute="leading" secondItem="9J7-Vu-bGC" secondAttribute="leading" id="dDK-ez-X1W"/>
+                            <constraint firstItem="g7c-Hv-gZc" firstAttribute="leading" secondItem="gRb-G3-kc3" secondAttribute="leading" constant="40" id="qPd-ns-Eij"/>
+                            <constraint firstItem="wQT-Mq-OVZ" firstAttribute="leading" secondItem="gRb-G3-kc3" secondAttribute="leading" constant="50" id="vmM-r6-29m"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KEs-MS-7Fq"/>
+                    <connections>
+                        <outlet property="startButton" destination="wQT-Mq-OVZ" id="7rb-GH-tUG"/>
+                        <outlet property="startButtonView" destination="RK7-qe-wpD" id="CrG-Bc-Soo"/>
+                        <outlet property="titleLabel" destination="g7c-Hv-gZc" id="2Eq-LR-fKn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W1z-Fs-bTX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113.74045801526717" y="-35.211267605633807"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="61F-6A-oSU">
+            <objects>
+                <viewController id="2GY-XK-FlT" customClass="AuthViewController" customModule="STTTTS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yIT-cs-oel">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="a8W-fI-HPj">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ilg-MD-EOM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fdw-4a-6PT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BP6-o3-SvO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="759.5419847328244" y="-35.211267605633807"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,6 +154,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="NIH-vE-8BQ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyv-JG-EIS">
                                 <rect key="frame" x="20" y="518" width="353" height="200"/>
                                 <constraints>
@@ -28,7 +169,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kas-wm-B4m">
                                 <rect key="frame" x="20" y="758" width="353" height="40"/>
-                                <color key="backgroundColor" red="0.75080358979999995" green="0.61187827589999999" blue="0.88630419969999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Rxu-ZW-0kr"/>
                                 </constraints>
@@ -73,10 +214,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="66" y="-27"/>
+            <point key="canvasLocation" x="1672.5190839694656" y="-35.211267605633807"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6db-mm-JQS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o94-4o-a23" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2uy-8H-axJ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zcs-nH-pYB" kind="relationship" relationship="rootViewController" id="LRf-Q5-qUl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="92n-P1-NTl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1040.4580152671756" y="-35.211267605633807"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.forward" catalog="system" width="128" height="95"/>
+        <image name="background" width="281" height="590"/>
+        <namedColor name="AccentColor">
+            <color red="0.36862745098039218" green="0.61960784313725492" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

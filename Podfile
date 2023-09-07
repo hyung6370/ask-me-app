@@ -8,6 +8,8 @@ target 'STTTTS' do
   # Pods for STTTTS
   pod 'googleapis', :path => '.'
   pod 'Alamofire'
+  pod 'Firebase/Auth'
+  pod 'IQKeyboardManagerSwift'
 
 end
 

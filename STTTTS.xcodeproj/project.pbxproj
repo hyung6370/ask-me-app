@@ -19,6 +19,14 @@
 		BDD98A482AA6EF250044A00F /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD98A472AA6EF250044A00F /* SpeechRecognitionService.swift */; };
 		BDD98A4A2AA7034F0044A00F /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD98A492AA7034F0044A00F /* AudioController.swift */; };
 		BDD98A4C2AA98CA50044A00F /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDD98A4B2AA98CA50044A00F /* SecretKey.plist */; };
+		BDD98A512AA9BD180044A00F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDD98A502AA9BD180044A00F /* GoogleService-Info.plist */; };
+		BDD98A562AA9C70C0044A00F /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDD98A532AA9C70C0044A00F /* Inter-Regular.ttf */; };
+		BDD98A572AA9C70C0044A00F /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDD98A542AA9C70C0044A00F /* Poppins-Bold.ttf */; };
+		BDD98A582AA9C70C0044A00F /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDD98A552AA9C70C0044A00F /* Inter-SemiBold.ttf */; };
+		BDD98A6C2AA9C9560044A00F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD98A6B2AA9C9560044A00F /* OnboardingViewController.swift */; };
+		BDD98A6E2AA9C9870044A00F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD98A6D2AA9C9870044A00F /* AuthViewController.swift */; };
+		BDD98A712AA9D72A0044A00F /* GmarketSansTTFLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDD98A6F2AA9D72A0044A00F /* GmarketSansTTFLight.ttf */; };
+		BDD98A722AA9D72A0044A00F /* GmarketSansTTFMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDD98A702AA9D72A0044A00F /* GmarketSansTTFMedium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +46,14 @@
 		BDD98A472AA6EF250044A00F /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
 		BDD98A492AA7034F0044A00F /* AudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 		BDD98A4B2AA98CA50044A00F /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
+		BDD98A502AA9BD180044A00F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BDD98A532AA9C70C0044A00F /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		BDD98A542AA9C70C0044A00F /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		BDD98A552AA9C70C0044A00F /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		BDD98A6B2AA9C9560044A00F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		BDD98A6D2AA9C9870044A00F /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		BDD98A6F2AA9D72A0044A00F /* GmarketSansTTFLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansTTFLight.ttf; sourceTree = "<group>"; };
+		BDD98A702AA9D72A0044A00F /* GmarketSansTTFMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansTTFMedium.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,11 +103,13 @@
 				BDD98A4E2AA990900044A00F /* View */,
 				BDD98A4D2AA990870044A00F /* Controller */,
 				BDD98A3A2AA6E48C0044A00F /* Assets.xcassets */,
+				BDD98A522AA9C70C0044A00F /* Fonts */,
 				BDD98A3C2AA6E48C0044A00F /* LaunchScreen.storyboard */,
 				BDD98A3F2AA6E48C0044A00F /* Info.plist */,
 				BDD98A4B2AA98CA50044A00F /* SecretKey.plist */,
-				BDD98A372AA6E48A0044A00F /* STTTTS.xcdatamodeld */,
+				BDD98A502AA9BD180044A00F /* GoogleService-Info.plist */,
 				BDD98A452AA6E5E20044A00F /* stttts-398104-058a2dbf3d61.json */,
+				BDD98A372AA6E48A0044A00F /* STTTTS.xcdatamodeld */,
 			);
 			path = STTTTS;
 			sourceTree = "<group>";
@@ -100,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				BDD98A322AA6E48A0044A00F /* ViewController.swift */,
+				BDD98A6B2AA9C9560044A00F /* OnboardingViewController.swift */,
+				BDD98A6D2AA9C9870044A00F /* AuthViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,6 +139,18 @@
 				BDD98A492AA7034F0044A00F /* AudioController.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BDD98A522AA9C70C0044A00F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BDD98A532AA9C70C0044A00F /* Inter-Regular.ttf */,
+				BDD98A542AA9C70C0044A00F /* Poppins-Bold.ttf */,
+				BDD98A552AA9C70C0044A00F /* Inter-SemiBold.ttf */,
+				BDD98A6F2AA9D72A0044A00F /* GmarketSansTTFLight.ttf */,
+				BDD98A702AA9D72A0044A00F /* GmarketSansTTFMedium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		BEF0DC5918906B28B19BCFF4 /* Pods */ = {
@@ -148,6 +180,8 @@
 			dependencies = (
 			);
 			name = STTTTS;
+			packageProductDependencies = (
+			);
 			productName = STTTTS;
 			productReference = BDD98A2B2AA6E48A0044A00F /* STTTTS.app */;
 			productType = "com.apple.product-type.application";
@@ -176,6 +210,8 @@
 				Base,
 			);
 			mainGroup = BDD98A222AA6E48A0044A00F;
+			packageReferences = (
+			);
 			productRefGroup = BDD98A2C2AA6E48A0044A00F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -191,10 +227,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD98A3E2AA6E48C0044A00F /* LaunchScreen.storyboard in Resources */,
+				BDD98A712AA9D72A0044A00F /* GmarketSansTTFLight.ttf in Resources */,
+				BDD98A722AA9D72A0044A00F /* GmarketSansTTFMedium.ttf in Resources */,
 				BDD98A4C2AA98CA50044A00F /* SecretKey.plist in Resources */,
 				BDD98A3B2AA6E48C0044A00F /* Assets.xcassets in Resources */,
+				BDD98A582AA9C70C0044A00F /* Inter-SemiBold.ttf in Resources */,
+				BDD98A572AA9C70C0044A00F /* Poppins-Bold.ttf in Resources */,
 				BDD98A462AA6E5E30044A00F /* stttts-398104-058a2dbf3d61.json in Resources */,
 				BDD98A362AA6E48A0044A00F /* Main.storyboard in Resources */,
+				BDD98A512AA9BD180044A00F /* GoogleService-Info.plist in Resources */,
+				BDD98A562AA9C70C0044A00F /* Inter-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +293,8 @@
 				BDD98A332AA6E48A0044A00F /* ViewController.swift in Sources */,
 				BDD98A392AA6E48A0044A00F /* STTTTS.xcdatamodeld in Sources */,
 				BDD98A2F2AA6E48A0044A00F /* AppDelegate.swift in Sources */,
+				BDD98A6E2AA9C9870044A00F /* AuthViewController.swift in Sources */,
+				BDD98A6C2AA9C9560044A00F /* OnboardingViewController.swift in Sources */,
 				BDD98A4A2AA7034F0044A00F /* AudioController.swift in Sources */,
 				BDD98A312AA6E48A0044A00F /* SceneDelegate.swift in Sources */,
 			);
