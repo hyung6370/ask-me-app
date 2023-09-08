@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
+        navigationItem.title = "Ask me"
         AudioController.sharedInstance.delegate = self
     }
     
