@@ -9,6 +9,9 @@ import UIKit
 import googleapis
 import AVFAudio
 import Alamofire
+import Firebase
+import AnimationSwitchingTabBar
+
 
 class ViewController: UIViewController {
     
@@ -16,16 +19,67 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultText: UILabel!
     @IBOutlet weak var startBtn: UIButton!
     
+    @IBOutlet weak var answerBackView: UIView!
+    @IBOutlet weak var meBackView: UIView!
+    
     var resultSentence: String = ""
     var isRecording = false
     var audioData: NSMutableData!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureUI()
         navigationItem.hidesBackButton = true
         navigationItem.title = "Ask me"
         AudioController.sharedInstance.delegate = self
+        
+
+        
+    }
+    
+    func configureUI() {
+        answerBackView.layer.cornerRadius = 10
+        answerBackView.clipsToBounds = false
+        answerBackView.layer.shadowColor = UIColor.darkGray.cgColor
+        answerBackView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        answerBackView.layer.shadowOpacity = 0.5
+        answerBackView.layer.shadowRadius = 4
+        answerBackView.backgroundColor = UIColor(hexCode: "F5F5F4")
+        
+        meBackView.layer.cornerRadius = 10
+        meBackView.clipsToBounds = false
+        meBackView.layer.shadowColor = UIColor.darkGray.cgColor
+        meBackView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        meBackView.layer.shadowOpacity = 0.5
+        meBackView.layer.shadowRadius = 4
+        meBackView.backgroundColor = UIColor(hexCode: "F5F5F4")
+        
+        startBtn.layer.cornerRadius = 20
+        startBtn.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+    }
+    
+    
+    @IBAction func logoutButtonTapped(_ sender: UIBarButtonItem) {
+        
+        let alertController = UIAlertController(title: "로그아웃", message: "정말 로그아웃 하시겠습니까?", preferredStyle: .alert)
+
+        let confirmAction = UIAlertAction(title: "확인", style: .default) { (action) in
+            do {
+                try Auth.auth().signOut()
+                self.navigationController?.popToRootViewController(animated: true)
+            } catch let signOutError as NSError {
+                print("Error signing out: %@", signOutError)
+            }
+        }
+
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
@@ -89,10 +143,9 @@ class ViewController: UIViewController {
             }
         }
     }
-    
 }
 
-extension ViewController : AudioControllerDelegate {
+extension ViewController: AudioControllerDelegate {
     func processSampleData(_ data: Data) -> Void {
         audioData.append(data)
 

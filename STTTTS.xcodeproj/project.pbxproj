@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		640047A1ABC8EAF0EA531767 /* Pods_STTTTS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727FD4EA6B42166AEDB910B5 /* Pods_STTTTS.framework */; };
+		BD8DA5152AAB6CD800218703 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DA5142AAB6CD800218703 /* HistoryViewController.swift */; };
 		BDD98A2F2AA6E48A0044A00F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD98A2E2AA6E48A0044A00F /* AppDelegate.swift */; };
 		BDD98A312AA6E48A0044A00F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD98A302AA6E48A0044A00F /* SceneDelegate.swift */; };
 		BDD98A332AA6E48A0044A00F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD98A322AA6E48A0044A00F /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		34AB8A4941CC1CB27C399C29 /* Pods-STTTTS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STTTTS.debug.xcconfig"; path = "Target Support Files/Pods-STTTTS/Pods-STTTTS.debug.xcconfig"; sourceTree = "<group>"; };
 		727FD4EA6B42166AEDB910B5 /* Pods_STTTTS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STTTTS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C20CE447EAE3998CCE113E /* Pods-STTTTS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STTTTS.release.xcconfig"; path = "Target Support Files/Pods-STTTTS/Pods-STTTTS.release.xcconfig"; sourceTree = "<group>"; };
+		BD8DA5142AAB6CD800218703 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		BDD98A2B2AA6E48A0044A00F /* STTTTS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STTTTS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD98A2E2AA6E48A0044A00F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD98A302AA6E48A0044A00F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				BDD98A322AA6E48A0044A00F /* ViewController.swift */,
 				BDD98A6B2AA9C9560044A00F /* OnboardingViewController.swift */,
 				BDD98A6D2AA9C9870044A00F /* AuthViewController.swift */,
+				BD8DA5142AAB6CD800218703 /* HistoryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				BDD98A2F2AA6E48A0044A00F /* AppDelegate.swift in Sources */,
 				BDD98A6E2AA9C9870044A00F /* AuthViewController.swift in Sources */,
 				BDD98A6C2AA9C9560044A00F /* OnboardingViewController.swift in Sources */,
+				BD8DA5152AAB6CD800218703 /* HistoryViewController.swift in Sources */,
 				BDD98A4A2AA7034F0044A00F /* AudioController.swift in Sources */,
 				BDD98A312AA6E48A0044A00F /* SceneDelegate.swift in Sources */,
 			);
