@@ -307,23 +307,36 @@
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZYP-rX-Arz">
-                                        <rect key="frame" x="96.666666666666686" y="518.66666666666663" width="170" height="80"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYP-rX-Arz">
+                                        <rect key="frame" x="101.66666666666669" y="518.66666666666663" width="160" height="80"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo Google" translatesAutoresizingMaskIntoConstraints="NO" id="fZR-Ml-gMp">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYv-IA-FDi">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="9uU-fH-SKw"/>
-                                                    <constraint firstAttribute="height" constant="80" id="zSR-mI-VcK"/>
+                                                    <constraint firstAttribute="width" constant="80" id="68n-9x-6zY"/>
+                                                    <constraint firstAttribute="height" constant="80" id="RRY-cI-X2e"/>
                                                 </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo Apple" translatesAutoresizingMaskIntoConstraints="NO" id="AQg-6l-ZRK">
-                                                <rect key="frame" x="90" y="0.0" width="80" height="80"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="Logo Google">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="GoogleButtonTapped:" destination="2GY-XK-FlT" eventType="touchUpInside" id="bLH-x8-kD4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bF9-xP-E2c">
+                                                <rect key="frame" x="79.999999999999986" y="0.0" width="80.000000000000014" height="80"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="DBn-cB-yKA"/>
-                                                    <constraint firstAttribute="height" constant="80" id="sBa-yI-awM"/>
+                                                    <constraint firstAttribute="height" constant="80" id="b2J-GA-Z6J"/>
+                                                    <constraint firstAttribute="width" constant="80" id="wjO-lC-91e"/>
                                                 </constraints>
-                                            </imageView>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="Logo Apple">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -376,11 +389,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="Fdw-4a-6PT"/>
                     <connections>
-                        <outlet property="appleImageView" destination="AQg-6l-ZRK" id="JCK-ys-GKV"/>
+                        <outlet property="appleButton" destination="bF9-xP-E2c" id="f3X-qu-s2n"/>
                         <outlet property="backView" destination="Ywz-Eb-8vL" id="SyX-Qp-3tl"/>
                         <outlet property="emailBackView" destination="5sE-H3-gkI" id="98b-XR-HmF"/>
                         <outlet property="emailTextField" destination="htt-HN-0YA" id="Wu3-WP-m9B"/>
-                        <outlet property="googleImageView" destination="fZR-Ml-gMp" id="aWq-7k-dxW"/>
+                        <outlet property="googleButton" destination="dYv-IA-FDi" id="dje-9y-ccE"/>
                         <outlet property="pwBackView" destination="Xya-H3-1Ch" id="4tq-sJ-fz8"/>
                         <outlet property="pwTextField" destination="R1W-gN-EI1" id="vv7-Q8-vpJ"/>
                         <outlet property="signInButton" destination="RaV-p7-w3Y" id="aCN-xk-SK1"/>

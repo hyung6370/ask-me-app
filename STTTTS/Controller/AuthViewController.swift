@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import GoogleSignIn
+import Firebase
 import FirebaseAuth
 
 class AuthViewController: UIViewController {
@@ -19,16 +21,14 @@ class AuthViewController: UIViewController {
     
     @IBOutlet weak var signInButton: UIButton!
     
-    @IBOutlet weak var googleImageView: UIImageView!
-    @IBOutlet weak var appleImageView: UIImageView!
+    @IBOutlet weak var googleButton: UIButton!
+    @IBOutlet weak var appleButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureUI()
         keyboardGesture()
-        googleImageViewTapped()
-        appleImageViewTapped()
     }
     
     func keyboardGesture() {
@@ -62,6 +62,15 @@ class AuthViewController: UIViewController {
         signInButton.backgroundColor = UIColor(hexCode: "F77D8D")
         signInButton.layer.cornerRadius = 20
         signInButton.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        
+        
+        if let image1 = UIImage(named: "Logo Google")?.resized(newSize: CGSize(width: 70, height: 70))?.withRenderingMode(.alwaysOriginal) {
+            googleButton.setImage(image1, for: .normal)
+        }
+        
+        if let image2 = UIImage(named: "Logo Apple")?.resized(newSize: CGSize(width: 70, height: 70))?.withRenderingMode(.alwaysOriginal) {
+            appleButton.setImage(image2, for: .normal)
+        }
     }
     
     @IBAction func SignInButtonTapped(_ sender: UIButton) {
@@ -77,27 +86,42 @@ class AuthViewController: UIViewController {
         }
     }
     
-    func googleImageViewTapped() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(googleImageTapped))
-        googleImageView.isUserInteractionEnabled = true
-        googleImageView.addGestureRecognizer(tapGesture)
-    }
     
-    @objc func googleImageTapped() {
-        print("구글 눌렸습니다.")
-    }
-    
-    func appleImageViewTapped() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(appleImageTapped))
-        appleImageView.isUserInteractionEnabled = true
-        appleImageView.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc func appleImageTapped() {
-        print("애플 눌렸습니다.")
-    }
-    
+    @IBAction func GoogleButtonTapped(_ sender: GIDSignInButton) {
+        
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
 
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+
+        // Start the sign in flow!
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
+        guard error == nil else {
+            return
+        }
+
+        guard let user = result?.user, let idToken = user.idToken?.tokenString else {
+            return
+        }
+        let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
+
+            Auth.auth().signIn(with: credential) { _, _ in
+                self.performSegue(withIdentifier: "SignInToHome", sender: self)
+            }
+        }
+        
+    }
+}
+
+extension UIImage {
+    func resized(newSize: CGSize) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+        self.draw(in: CGRect(origin: CGPoint.zero, size: newSize))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
 }
 
 extension UIColor {

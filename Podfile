@@ -10,6 +10,7 @@ target 'STTTTS' do
   pod 'Alamofire'
   pod 'Firebase/Auth'
   pod 'IQKeyboardManagerSwift'
+  pod 'GoogleSignIn'
 
 end
 
