@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		640047A1ABC8EAF0EA531767 /* Pods_STTTTS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727FD4EA6B42166AEDB910B5 /* Pods_STTTTS.framework */; };
 		BD8DA5152AAB6CD800218703 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DA5142AAB6CD800218703 /* HistoryViewController.swift */; };
+		BD8DA5192AAC046200218703 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DA5182AAC046200218703 /* History.swift */; };
+		BD8DA51B2AAC04DD00218703 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DA51A2AAC04DD00218703 /* Detail.swift */; };
+		BD8DA51E2AAC08DC00218703 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DA51C2AAC08DC00218703 /* HistoryTableViewCell.swift */; };
+		BD8DA51F2AAC08DC00218703 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD8DA51D2AAC08DC00218703 /* HistoryTableViewCell.xib */; };
+		BD8DA5252AAC0EC100218703 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DA5242AAC0EC100218703 /* DetailViewController.swift */; };
 		BDD98A2F2AA6E48A0044A00F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD98A2E2AA6E48A0044A00F /* AppDelegate.swift */; };
 		BDD98A312AA6E48A0044A00F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD98A302AA6E48A0044A00F /* SceneDelegate.swift */; };
 		BDD98A332AA6E48A0044A00F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD98A322AA6E48A0044A00F /* ViewController.swift */; };
@@ -35,6 +40,11 @@
 		727FD4EA6B42166AEDB910B5 /* Pods_STTTTS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STTTTS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C20CE447EAE3998CCE113E /* Pods-STTTTS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STTTTS.release.xcconfig"; path = "Target Support Files/Pods-STTTTS/Pods-STTTTS.release.xcconfig"; sourceTree = "<group>"; };
 		BD8DA5142AAB6CD800218703 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		BD8DA5182AAC046200218703 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		BD8DA51A2AAC04DD00218703 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		BD8DA51C2AAC08DC00218703 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		BD8DA51D2AAC08DC00218703 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		BD8DA5242AAC0EC100218703 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BDD98A2B2AA6E48A0044A00F /* STTTTS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STTTTS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD98A2E2AA6E48A0044A00F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD98A302AA6E48A0044A00F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +133,7 @@
 				BDD98A6B2AA9C9560044A00F /* OnboardingViewController.swift */,
 				BDD98A6D2AA9C9870044A00F /* AuthViewController.swift */,
 				BD8DA5142AAB6CD800218703 /* HistoryViewController.swift */,
+				BD8DA5242AAC0EC100218703 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -131,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				BDD98A342AA6E48A0044A00F /* Main.storyboard */,
+				BD8DA51C2AAC08DC00218703 /* HistoryTableViewCell.swift */,
+				BD8DA51D2AAC08DC00218703 /* HistoryTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,6 +153,8 @@
 			children = (
 				BDD98A472AA6EF250044A00F /* SpeechRecognitionService.swift */,
 				BDD98A492AA7034F0044A00F /* AudioController.swift */,
+				BD8DA5182AAC046200218703 /* History.swift */,
+				BD8DA51A2AAC04DD00218703 /* Detail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,6 +254,7 @@
 				BDD98A462AA6E5E30044A00F /* stttts-398104-058a2dbf3d61.json in Resources */,
 				BDD98A362AA6E48A0044A00F /* Main.storyboard in Resources */,
 				BDD98A512AA9BD180044A00F /* GoogleService-Info.plist in Resources */,
+				BD8DA51F2AAC08DC00218703 /* HistoryTableViewCell.xib in Resources */,
 				BDD98A562AA9C70C0044A00F /* Inter-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,14 +308,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD8DA5252AAC0EC100218703 /* DetailViewController.swift in Sources */,
 				BDD98A482AA6EF250044A00F /* SpeechRecognitionService.swift in Sources */,
 				BDD98A332AA6E48A0044A00F /* ViewController.swift in Sources */,
 				BDD98A392AA6E48A0044A00F /* STTTTS.xcdatamodeld in Sources */,
 				BDD98A2F2AA6E48A0044A00F /* AppDelegate.swift in Sources */,
+				BD8DA5192AAC046200218703 /* History.swift in Sources */,
 				BDD98A6E2AA9C9870044A00F /* AuthViewController.swift in Sources */,
+				BD8DA51E2AAC08DC00218703 /* HistoryTableViewCell.swift in Sources */,
 				BDD98A6C2AA9C9560044A00F /* OnboardingViewController.swift in Sources */,
 				BD8DA5152AAB6CD800218703 /* HistoryViewController.swift in Sources */,
 				BDD98A4A2AA7034F0044A00F /* AudioController.swift in Sources */,
+				BD8DA51B2AAC04DD00218703 /* Detail.swift in Sources */,
 				BDD98A312AA6E48A0044A00F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

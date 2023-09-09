@@ -10,17 +10,20 @@ import googleapis
 import AVFAudio
 import Alamofire
 import Firebase
-import AnimationSwitchingTabBar
 
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var semiTitleLabel: UILabel!
     @IBOutlet weak var chatGptLabel: UILabel!
     @IBOutlet weak var resultText: UILabel!
     @IBOutlet weak var startBtn: UIButton!
     
     @IBOutlet weak var answerBackView: UIView!
     @IBOutlet weak var meBackView: UIView!
+    
+    let db = Firestore.firestore()
+    
     
     var resultSentence: String = ""
     var isRecording = false
@@ -32,14 +35,18 @@ class ViewController: UIViewController {
         
         configureUI()
         navigationItem.hidesBackButton = true
+        navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Ask me"
         AudioController.sharedInstance.delegate = self
-        
 
-        
     }
     
     func configureUI() {
+        semiTitleLabel.layer.shadowColor = UIColor.darkGray.cgColor
+        semiTitleLabel.layer.shadowOffset = CGSize(width: 0, height: 2)
+        semiTitleLabel.layer.shadowOpacity = 0.2
+        semiTitleLabel.layer.shadowRadius = 4
+        
         answerBackView.layer.cornerRadius = 10
         answerBackView.clipsToBounds = false
         answerBackView.layer.shadowColor = UIColor.darkGray.cgColor
@@ -143,6 +150,35 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    func saveDataToFirebase() {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            print("유저가 로그인 하지 않았습니다.")
+            return
+        }
+        
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateString = formatter.string(from: date)
+        
+        let myQuestion = resultText.text ?? ""
+        let gptAnswer = chatGptLabel.text ?? ""
+        
+        let historyItem: [String: Any] = [
+            "myQuestion": myQuestion,
+            "gptAnswer": gptAnswer
+        ]
+        
+        db.collection("users").document(uid).collection("history").document(dateString).setData(historyItem) { err in
+            if let err = err {
+                print("Error adding data: \(err)")
+            }
+            else {
+                print("Data successfully added")
+            }
+        }
+    }
 }
 
 extension ViewController: AudioControllerDelegate {
@@ -172,11 +208,13 @@ extension ViewController: AudioControllerDelegate {
                         self?.isRecording = false
                         _ = AudioController.sharedInstance.stop()
                         SpeechRecognitionService.sharedInstance.stopStreaming()
+
                         self?.startBtn.setTitle("말하기 시작", for: .normal)
                         
                         self?.askGPT(question: self?.resultSentence ?? "") { [weak self] response in
                             DispatchQueue.main.async {
                                 self?.chatGptLabel.text = response
+                                self?.saveDataToFirebase()
                             }
                         }
                     }

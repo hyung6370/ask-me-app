@@ -9,6 +9,7 @@ target 'STTTTS' do
   pod 'googleapis', :path => '.'
   pod 'Alamofire'
   pod 'Firebase/Auth'
+  pod 'Firebase/Firestore', '~> 8.0'
   pod 'IQKeyboardManagerSwift'
   pod 'GoogleSignIn'
 
