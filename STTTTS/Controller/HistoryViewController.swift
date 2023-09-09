@@ -17,6 +17,8 @@ class HistoryViewController: UIViewController {
     let db = Firestore.firestore()
     
     var historys: [History] = []
+//    var details: [
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +48,31 @@ class HistoryViewController: UIViewController {
         backView.backgroundColor = UIColor(hexCode: "F5F5F4")
     }
     
+//    func loadHistory() {
+//        if let uid = Auth.auth().currentUser?.uid {
+//            db.collection("users").document(uid).collection("history").order(by: "createDate", descending: true).addSnapshotListener { (querySnapshot, error) in
+//                if let e = error {
+//                    print("History loading failed: \(e.localizedDescription)")
+//                } else {
+//                    self.historys = []
+//                    if let snapshotDocuments = querySnapshot?.documents {
+//                        for doc in snapshotDocuments {
+//                            let data = doc.data()
+//                            if let createDate = data["createDate"] as? String {
+//                                let newHistory = History(createDate: createDate)
+//
+//                                self.historys.append(newHistory)
+//                            }
+//                        }
+//                        DispatchQueue.main.async {
+//                            self.historyTableView.reloadData()
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+    
     func loadHistory() {
         if let uid = Auth.auth().currentUser?.uid {
             db.collection("users").document(uid).collection("history").order(by: "createDate", descending: true).addSnapshotListener { (querySnapshot, error) in
@@ -57,8 +84,19 @@ class HistoryViewController: UIViewController {
                         for doc in snapshotDocuments {
                             let data = doc.data()
                             if let createDate = data["createDate"] as? String {
-                                let newHistory = History(createDate: createDate)
+                                
+                                // 여기서 Detail 정보를 불러와야 합니다.
+                                // 예를 들면:
+                                var details: [Detail] = []
+                                
+                                if let myQuestion = data["myQuestion"] as? String,
+                                   let gptAnswer = data["gptAnswer"] as? String {
+                                    // DetailReminderDate 를 불러오려면 데이터베이스에 해당 필드가 있어야 합니다.
+                                    let detail = Detail(myQuestion: myQuestion, gptAnswer: gptAnswer, DetailReminderDate: nil)
+                                    details.append(detail)
+                                }
 
+                                let newHistory = History(createDate: createDate, Details: details)
                                 self.historys.append(newHistory)
                             }
                         }
@@ -70,6 +108,7 @@ class HistoryViewController: UIViewController {
             }
         }
     }
+
 }
 
 extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
@@ -100,5 +139,20 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         cell.hourMinuteSecond.text = formatter.string(from: createDate)
         
         return cell
+    }
+}
+
+extension HistoryViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as? DetailViewController {
+            
+            let selectedHistory = historys[indexPath.row]
+            detailVC.gptAnswer = selectedHistory.Details.first?.gptAnswer
+            detailVC.myQuestion = selectedHistory.Details.first?.myQuestion
+            
+            
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
 }

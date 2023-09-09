@@ -9,10 +9,11 @@ import UIKit
 
 struct History {
     var createDate: String?
-
-    let Details: [Detail] = []
+//    let Details: [Detail] = []
+    var Details: [Detail]
     
-    init(createDate: String? = nil) {
+    init(createDate: String? = nil, Details: [Detail]) {
         self.createDate = createDate
+        self.Details = Details
     }
 }

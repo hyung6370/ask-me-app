@@ -13,10 +13,17 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var answerBackView: UIView!
     @IBOutlet weak var meBackView: UIView!
     
+    @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet weak var meLabel: UILabel!
+    
+    var myQuestion: String?
+    var gptAnswer: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureUI()
+        loadData()
     }
     
     func configureUI() {
@@ -42,5 +49,9 @@ class DetailViewController: UIViewController {
         meBackView.backgroundColor = UIColor(hexCode: "F5F5F4")
     }
 
+    func loadData() {
+        answerLabel.text = gptAnswer
+        meLabel.text = myQuestion
+    }
 
 }

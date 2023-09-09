@@ -722,7 +722,9 @@
                     </view>
                     <connections>
                         <outlet property="answerBackView" destination="4jq-Oi-WDO" id="dlc-ZF-TFh"/>
+                        <outlet property="answerLabel" destination="ezM-6u-ZQO" id="Ac1-Xq-zga"/>
                         <outlet property="meBackView" destination="uVo-Tg-DxI" id="yMO-zN-g5e"/>
+                        <outlet property="meLabel" destination="WC9-ZW-22T" id="5S1-fC-aie"/>
                         <outlet property="semiTitleLabel" destination="QH8-TM-2Ec" id="8ZY-bp-XHh"/>
                     </connections>
                 </viewController>
