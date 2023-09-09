@@ -8,7 +8,10 @@
 import UIKit
 
 class HistoryTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var yearMonthDay: UILabel!
+    @IBOutlet weak var hourMinuteSecond: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

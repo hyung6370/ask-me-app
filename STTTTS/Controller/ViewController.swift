@@ -166,6 +166,7 @@ class ViewController: UIViewController {
         let gptAnswer = chatGptLabel.text ?? ""
         
         let historyItem: [String: Any] = [
+            "createDate": dateString,
             "myQuestion": myQuestion,
             "gptAnswer": gptAnswer
         ]
