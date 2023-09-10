@@ -186,7 +186,6 @@ extension ViewController: AudioControllerDelegate {
     func processSampleData(_ data: Data) -> Void {
         audioData.append(data)
 
-        // We recommend sending samples in 100ms chunks
         let chunkSize: Int = Int(0.1 * Double(16000) * 2)
         if audioData.length > chunkSize {
             SpeechRecognitionService.sharedInstance.streamAudioData(audioData, completion: { [weak self] (response, error) in

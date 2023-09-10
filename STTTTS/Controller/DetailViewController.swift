@@ -15,15 +15,20 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var meLabel: UILabel!
+    @IBOutlet weak var hourMinuteSecond: UILabel!
     
     var myQuestion: String?
     var gptAnswer: String?
+    var createDate: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureUI()
         loadData()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        divideDate()
     }
     
     func configureUI() {
@@ -52,6 +57,31 @@ class DetailViewController: UIViewController {
     func loadData() {
         answerLabel.text = gptAnswer
         meLabel.text = myQuestion
+    }
+    
+    func divideDate() {
+        if let createDate = createDate {
+            let dateFormatter = DateFormatter()
+            let dateFormatter2 = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            dateFormatter2.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            if let date = dateFormatter.date(from: createDate) {
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                let newDateString = dateFormatter.string(from: date)
+                navigationItem.title = newDateString
+            } else {
+                navigationItem.title = createDate
+            }
+            
+            if let date = dateFormatter2.date(from: createDate) {
+                dateFormatter2.dateFormat = "HH:mm:ss"
+                let newDateString2 = dateFormatter2.string(from: date)
+                hourMinuteSecond.text = newDateString2
+                
+            } else {
+                hourMinuteSecond.text = createDate
+            }
+        }
     }
 
 }

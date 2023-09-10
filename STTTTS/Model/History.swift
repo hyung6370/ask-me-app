@@ -8,11 +8,12 @@
 import UIKit
 
 struct History {
+    var id: String?
     var createDate: String?
-//    let Details: [Detail] = []
     var Details: [Detail]
     
-    init(createDate: String? = nil, Details: [Detail]) {
+    init(id: String? = nil, createDate: String? = nil, Details: [Detail]) {
+        self.id = id
         self.createDate = createDate
         self.Details = Details
     }

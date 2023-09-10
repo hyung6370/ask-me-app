@@ -17,8 +17,6 @@ class HistoryViewController: UIViewController {
     let db = Firestore.firestore()
     
     var historys: [History] = []
-//    var details: [
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,31 +46,6 @@ class HistoryViewController: UIViewController {
         backView.backgroundColor = UIColor(hexCode: "F5F5F4")
     }
     
-//    func loadHistory() {
-//        if let uid = Auth.auth().currentUser?.uid {
-//            db.collection("users").document(uid).collection("history").order(by: "createDate", descending: true).addSnapshotListener { (querySnapshot, error) in
-//                if let e = error {
-//                    print("History loading failed: \(e.localizedDescription)")
-//                } else {
-//                    self.historys = []
-//                    if let snapshotDocuments = querySnapshot?.documents {
-//                        for doc in snapshotDocuments {
-//                            let data = doc.data()
-//                            if let createDate = data["createDate"] as? String {
-//                                let newHistory = History(createDate: createDate)
-//
-//                                self.historys.append(newHistory)
-//                            }
-//                        }
-//                        DispatchQueue.main.async {
-//                            self.historyTableView.reloadData()
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
-    
     func loadHistory() {
         if let uid = Auth.auth().currentUser?.uid {
             db.collection("users").document(uid).collection("history").order(by: "createDate", descending: true).addSnapshotListener { (querySnapshot, error) in
@@ -84,19 +57,17 @@ class HistoryViewController: UIViewController {
                         for doc in snapshotDocuments {
                             let data = doc.data()
                             if let createDate = data["createDate"] as? String {
-                                
-                                // 여기서 Detail 정보를 불러와야 합니다.
-                                // 예를 들면:
+
                                 var details: [Detail] = []
-                                
+
                                 if let myQuestion = data["myQuestion"] as? String,
                                    let gptAnswer = data["gptAnswer"] as? String {
-                                    // DetailReminderDate 를 불러오려면 데이터베이스에 해당 필드가 있어야 합니다.
+
                                     let detail = Detail(myQuestion: myQuestion, gptAnswer: gptAnswer, DetailReminderDate: nil)
                                     details.append(detail)
                                 }
 
-                                let newHistory = History(createDate: createDate, Details: details)
+                                let newHistory = History(id: doc.documentID, createDate: createDate, Details: details)
                                 self.historys.append(newHistory)
                             }
                         }
@@ -140,6 +111,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
 }
 
 extension HistoryViewController {
@@ -150,9 +122,38 @@ extension HistoryViewController {
             let selectedHistory = historys[indexPath.row]
             detailVC.gptAnswer = selectedHistory.Details.first?.gptAnswer
             detailVC.myQuestion = selectedHistory.Details.first?.myQuestion
+            detailVC.createDate = selectedHistory.createDate
             
             
             self.navigationController?.pushViewController(detailVC, animated: true)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
+            let historyToDelete = self.historys[indexPath.row]
+            guard let docId = historyToDelete.id else {
+                print("Document ID not found")
+                completionHandler(false)
+                return
+            }
+            if let uid = Auth.auth().currentUser?.uid {
+                self.db.collection("users").document(uid).collection("history").document(docId).delete { error in
+                    if let error = error {
+                        print("Error removing document: \(error)")
+                    } else {
+                        self.historys.remove(at: indexPath.row)
+                        self.historyTableView.deleteRows(at: [indexPath], with: .automatic)
+                        print("Document successfully removed!")
+                    }
+                    completionHandler(true)
+                }
+            } else {
+                completionHandler(false)
+            }
+        }
+        
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        return configuration
     }
 }

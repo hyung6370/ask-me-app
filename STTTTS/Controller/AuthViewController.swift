@@ -15,6 +15,7 @@ import CryptoKit
 class AuthViewController: UIViewController {
     
     @IBOutlet weak var backView: UIView!
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
     
