@@ -138,16 +138,38 @@ extension HistoryViewController {
                 return
             }
             if let uid = Auth.auth().currentUser?.uid {
-                self.db.collection("users").document(uid).collection("history").document(docId).delete { error in
-                    if let error = error {
-                        print("Error removing document: \(error)")
-                    } else {
-                        self.historys.remove(at: indexPath.row)
-                        self.historyTableView.deleteRows(at: [indexPath], with: .automatic)
-                        print("Document successfully removed!")
+                
+                let alertController = UIAlertController(title: "History 삭제", message: "해당 대화를 지우시겠습니까?", preferredStyle: .alert)
+                
+                let confirmAction = UIAlertAction(title: "확인", style: .default) { (action) in
+                    
+                    self.db.collection("users").document(uid).collection("history").document(docId).delete { error in
+                        if let error = error {
+                            print("Error removing document: \(error)")
+                        } else {
+                            if indexPath.row < self.historys.count {
+                                self.historys.remove(at: indexPath.row)
+                                self.historyTableView.deleteRows(at: [indexPath], with: .automatic)
+                                print("해당 대화가 삭제되었습니다.")
+                            }
+                            else {
+                                print("Warning: Attempting to delete a history out of range.")
+                            }
+                        }
                     }
+                    
                     completionHandler(true)
                 }
+                
+                let cancelAction = UIAlertAction(title: "취소", style: .cancel) { (action) in
+                    completionHandler(false)
+                }
+                
+                alertController.addAction(confirmAction)
+                alertController.addAction(cancelAction)
+                
+                self.present(alertController, animated: true, completion: nil)
+                
             } else {
                 completionHandler(false)
             }
