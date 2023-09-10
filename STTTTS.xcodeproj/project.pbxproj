@@ -14,6 +14,7 @@
 		BD8DA51E2AAC08DC00218703 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DA51C2AAC08DC00218703 /* HistoryTableViewCell.swift */; };
 		BD8DA51F2AAC08DC00218703 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD8DA51D2AAC08DC00218703 /* HistoryTableViewCell.xib */; };
 		BD8DA5252AAC0EC100218703 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DA5242AAC0EC100218703 /* DetailViewController.swift */; };
+		BD8DA5272AAD5CE300218703 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DA5262AAD5CE300218703 /* NotificationViewController.swift */; };
 		BDD98A2F2AA6E48A0044A00F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD98A2E2AA6E48A0044A00F /* AppDelegate.swift */; };
 		BDD98A312AA6E48A0044A00F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD98A302AA6E48A0044A00F /* SceneDelegate.swift */; };
 		BDD98A332AA6E48A0044A00F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD98A322AA6E48A0044A00F /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 		BD8DA51C2AAC08DC00218703 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		BD8DA51D2AAC08DC00218703 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		BD8DA5242AAC0EC100218703 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BD8DA5262AAD5CE300218703 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		BDD98A2B2AA6E48A0044A00F /* STTTTS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STTTTS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD98A2E2AA6E48A0044A00F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD98A302AA6E48A0044A00F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				BDD98A6D2AA9C9870044A00F /* AuthViewController.swift */,
 				BD8DA5142AAB6CD800218703 /* HistoryViewController.swift */,
 				BD8DA5242AAC0EC100218703 /* DetailViewController.swift */,
+				BD8DA5262AAD5CE300218703 /* NotificationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				BD8DA51E2AAC08DC00218703 /* HistoryTableViewCell.swift in Sources */,
 				BDD98A6C2AA9C9560044A00F /* OnboardingViewController.swift in Sources */,
 				BD8DA5152AAB6CD800218703 /* HistoryViewController.swift in Sources */,
+				BD8DA5272AAD5CE300218703 /* NotificationViewController.swift in Sources */,
 				BDD98A4A2AA7034F0044A00F /* AudioController.swift in Sources */,
 				BD8DA51B2AAC04DD00218703 /* Detail.swift in Sources */,
 				BDD98A312AA6E48A0044A00F /* SceneDelegate.swift in Sources */,

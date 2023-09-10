@@ -130,52 +130,33 @@ extension HistoryViewController {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, sourceView, completionHandler) in
+            
             let historyToDelete = self.historys[indexPath.row]
-            guard let docId = historyToDelete.id else {
-                print("Document ID not found")
-                completionHandler(false)
-                return
-            }
-            if let uid = Auth.auth().currentUser?.uid {
+            
+            if let idToDelete = historyToDelete.id, let uid = Auth.auth().currentUser?.uid {
                 
-                let alertController = UIAlertController(title: "History 삭제", message: "해당 대화를 지우시겠습니까?", preferredStyle: .alert)
-                
-                let confirmAction = UIAlertAction(title: "확인", style: .default) { (action) in
-                    
-                    self.db.collection("users").document(uid).collection("history").document(docId).delete { error in
-                        if let error = error {
-                            print("Error removing document: \(error)")
-                        } else {
-                            if indexPath.row < self.historys.count {
+                self.db.collection("users").document(uid).collection("history").document(idToDelete).delete { error in
+                    if let error = error {
+                        print("Failed to delete document: \(error)")
+                    } else {
+                        
+                        DispatchQueue.main.async {
+                            tableView.performBatchUpdates({
                                 self.historys.remove(at: indexPath.row)
-                                self.historyTableView.deleteRows(at: [indexPath], with: .automatic)
-                                print("해당 대화가 삭제되었습니다.")
-                            }
-                            else {
-                                print("Warning: Attempting to delete a history out of range.")
-                            }
+                                tableView.deleteRows(at: [indexPath], with: .automatic)
+                            }, completion: nil)
                         }
                     }
-                    
-                    completionHandler(true)
                 }
-                
-                let cancelAction = UIAlertAction(title: "취소", style: .cancel) { (action) in
-                    completionHandler(false)
-                }
-                
-                alertController.addAction(confirmAction)
-                alertController.addAction(cancelAction)
-                
-                self.present(alertController, animated: true, completion: nil)
-                
             } else {
-                completionHandler(false)
+                print("Could not delete the history because the ID was nil or the user was not logged in")
             }
+            completionHandler(true)
         }
         
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
         return configuration
     }
+
 }
