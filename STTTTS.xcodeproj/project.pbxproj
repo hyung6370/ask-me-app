@@ -118,7 +118,6 @@
 				BDD98A4D2AA990870044A00F /* Controller */,
 				BDD98A3A2AA6E48C0044A00F /* Assets.xcassets */,
 				BDD98A522AA9C70C0044A00F /* Fonts */,
-				BDD98A3C2AA6E48C0044A00F /* LaunchScreen.storyboard */,
 				BDD98A3F2AA6E48C0044A00F /* Info.plist */,
 				BDD98A4B2AA98CA50044A00F /* SecretKey.plist */,
 				BDD98A502AA9BD180044A00F /* GoogleService-Info.plist */,
@@ -147,6 +146,7 @@
 				BDD98A342AA6E48A0044A00F /* Main.storyboard */,
 				BD8DA51C2AAC08DC00218703 /* HistoryTableViewCell.swift */,
 				BD8DA51D2AAC08DC00218703 /* HistoryTableViewCell.xib */,
+				BDD98A3C2AA6E48C0044A00F /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
