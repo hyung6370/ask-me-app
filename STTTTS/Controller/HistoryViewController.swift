@@ -135,17 +135,15 @@ extension HistoryViewController {
             let historyToDelete = self.historys[indexPath.row]
             
             if let idToDelete = historyToDelete.id, let uid = Auth.auth().currentUser?.uid {
-                
-                self.db.collection("users").document(uid).collection("history").document(idToDelete).delete { error in
-                    if let error = error {
-                        print("Failed to delete document: \(error)")
-                    } else {
-                        
-                        DispatchQueue.main.async {
-                            tableView.performBatchUpdates({
-                                self.historys.remove(at: indexPath.row)
-                                tableView.deleteRows(at: [indexPath], with: .automatic)
-                            }, completion: nil)
+                DispatchQueue.main.async {
+                    self.db.collection("users").document(uid).collection("history").document(idToDelete).delete { error in
+                        if let error = error {
+                            print("Failed to delete document: \(error)")
+                            completionHandler(true)
+                        } else {
+                            self.historys.remove(at: indexPath.row)
+                            tableView.deleteRows(at: [indexPath], with: .automatic)
+                            completionHandler(true)
                         }
                     }
                 }
