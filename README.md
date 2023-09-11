@@ -30,7 +30,7 @@
 - Email, Google, Apple Auth 로그인 기능
 - STT (Speech To Text) 기능 (레코딩한 말을 텍스트로 바꿔주는 기능)
 - OpenAI(ChatGPT) 기능 (말한 질문에 GPT가 대답해주는 기능)
-- 대화한 기록들을 저장, 삭제하는 기능
+- 대화한 기록들을 저장, 조회, 삭제 기능
 
 ### 📌 개발 환경
 - iOS 16.0 +
