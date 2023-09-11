@@ -414,22 +414,22 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="f7i-N9-Swm">
-                                <rect key="frame" x="25" y="149" width="343" height="324"/>
+                                <rect key="frame" x="25" y="167.99999999999997" width="343" height="310.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0W-GG-jsu">
-                                        <rect key="frame" x="0.0" y="0.0" width="66" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="30.333333333333332"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pw8-Hb-6fo">
-                                        <rect key="frame" x="0.0" y="24" width="343" height="300"/>
+                                        <rect key="frame" x="0.0" y="30.333333333333343" width="343" height="280"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wjc-Da-cJC">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="300"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="280"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="300" id="Wfj-zl-Cln"/>
+                                                    <constraint firstAttribute="height" constant="280" id="Wfj-zl-Cln"/>
                                                 </constraints>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
@@ -450,19 +450,22 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="I5x-B5-ohi">
-                                <rect key="frame" x="25" y="503" width="343" height="179"/>
+                                <rect key="frame" x="25" y="498.33333333333331" width="343" height="194.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPR-16-B2a">
                                         <rect key="frame" x="0.0" y="0.0" width="26.333333333333332" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="UKT-sW-Rjl"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xy-4v-JbI">
-                                        <rect key="frame" x="0.0" y="24" width="343" height="155"/>
+                                        <rect key="frame" x="0.0" y="24.000000000000057" width="343" height="170.66666666666666"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyv-JG-EIS">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="170.66666666666666"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -470,8 +473,8 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Wyv-JG-EIS" secondAttribute="bottom" id="EIW-RW-1uY"/>
                                             <constraint firstAttribute="trailing" secondItem="Wyv-JG-EIS" secondAttribute="trailing" id="Keo-8o-uDq"/>
-                                            <constraint firstItem="Wyv-JG-EIS" firstAttribute="leading" secondItem="6Xy-4v-JbI" secondAttribute="leading" id="Qi3-cb-Ht4"/>
                                             <constraint firstItem="Wyv-JG-EIS" firstAttribute="leading" secondItem="6Xy-4v-JbI" secondAttribute="leading" id="jAb-UW-1VO"/>
                                             <constraint firstItem="Wyv-JG-EIS" firstAttribute="top" secondItem="6Xy-4v-JbI" secondAttribute="top" id="xSt-fB-pRT"/>
                                         </constraints>
@@ -482,7 +485,10 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="궁금한 점들을 물어보세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keF-EQ-B1b">
-                                <rect key="frame" x="25" y="113" width="343" height="19"/>
+                                <rect key="frame" x="25" y="113" width="343" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="ZlI-E9-4zJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="19"/>
                                 <color key="textColor" red="0.85586160420000001" green="0.43608242270000003" blue="0.4903922081" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -492,19 +498,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="keF-EQ-B1b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="9mg-ch-LoU"/>
+                            <constraint firstItem="I5x-B5-ohi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="498.33333333333326" id="FYN-25-Zmk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f7i-N9-Swm" secondAttribute="trailing" constant="25" id="Htk-Gx-3sQ"/>
                             <constraint firstItem="NIH-vE-8BQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="L3C-fQ-FUB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kas-wm-B4m" secondAttribute="bottom" constant="20" id="OHo-pj-EKX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I5x-B5-ohi" secondAttribute="trailing" constant="25" id="RMb-xF-M6P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kas-wm-B4m" secondAttribute="trailing" constant="25" id="ZD9-b8-AOh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="keF-EQ-B1b" secondAttribute="trailing" constant="25" id="Zya-zj-S5K"/>
-                            <constraint firstItem="f7i-N9-Swm" firstAttribute="top" secondItem="keF-EQ-B1b" secondAttribute="bottom" constant="17" id="djY-6m-CuN"/>
+                            <constraint firstItem="f7i-N9-Swm" firstAttribute="top" secondItem="keF-EQ-B1b" secondAttribute="bottom" constant="30" id="djY-6m-CuN"/>
                             <constraint firstItem="keF-EQ-B1b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="eVv-80-FrP"/>
-                            <constraint firstItem="I5x-B5-ohi" firstAttribute="top" secondItem="f7i-N9-Swm" secondAttribute="bottom" constant="30" id="kIY-zZ-Bl5"/>
+                            <constraint firstItem="I5x-B5-ohi" firstAttribute="top" secondItem="f7i-N9-Swm" secondAttribute="bottom" constant="20" id="kIY-zZ-Bl5"/>
                             <constraint firstItem="kas-wm-B4m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="mpN-lq-i12"/>
                             <constraint firstItem="I5x-B5-ohi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="olP-6n-fWs"/>
                             <constraint firstItem="f7i-N9-Swm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="uRD-SU-JEC"/>
-                            <constraint firstItem="kas-wm-B4m" firstAttribute="top" secondItem="I5x-B5-ohi" secondAttribute="bottom" constant="56" id="wj5-F5-a7B"/>
+                            <constraint firstItem="kas-wm-B4m" firstAttribute="top" secondItem="I5x-B5-ohi" secondAttribute="bottom" constant="45" id="wj5-F5-a7B"/>
                             <constraint firstItem="f7i-N9-Swm" firstAttribute="centerX" secondItem="NIH-vE-8BQ" secondAttribute="centerX" id="xEC-li-J44"/>
                             <constraint firstAttribute="bottomMargin" secondItem="NIH-vE-8BQ" secondAttribute="bottom" constant="-34" id="y8h-av-tQH"/>
                         </constraints>

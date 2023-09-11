@@ -76,6 +76,7 @@ class ViewController: UIViewController {
         chatGptTetxtView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         chatGptTetxtView.textContainer.lineFragmentPadding = 0
         chatGptTetxtView.layoutIfNeeded()
+        chatGptTetxtView.clipsToBounds = true
     }
     
     @IBAction func logoutButtonTapped(_ sender: UIBarButtonItem) {
