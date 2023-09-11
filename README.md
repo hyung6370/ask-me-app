@@ -1,5 +1,5 @@
 # ask-me-app
-## 뭐든지 물어봐 🎙️, GPT와 말로 대화해보자 🗣️✨
+## ✋🏻 뭐든지 물어봐 🎙️, GPT와 말로 대화해보자 🗣️✨
 구글 STT API와 Open AI(ChatGPT) API를 활용하여 만든 앱입니다 🩵
 
 
@@ -28,8 +28,8 @@
 
 ### 📌 주요 기능
 - Email, Google, Apple Auth 로그인 기능
-- STT (Speech To Text) 기능 (내가 레코딩한 말을 텍스트로 바꿔주는 기능)
-- OpenAI(ChatGPT) 기능 (내가 말한 질문에 GPT가 대답해주는 기능)
+- STT (Speech To Text) 기능 (레코딩한 말을 텍스트로 바꿔주는 기능)
+- OpenAI(ChatGPT) 기능 (말한 질문에 GPT가 대답해주는 기능)
 - 대화한 기록들을 저장, 삭제하는 기능
 
 ### 📌 개발 환경
