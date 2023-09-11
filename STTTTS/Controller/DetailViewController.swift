@@ -13,7 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var answerBackView: UIView!
     @IBOutlet weak var meBackView: UIView!
     
-    @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet weak var chatGptTextView: UITextView!
     @IBOutlet weak var meLabel: UILabel!
     @IBOutlet weak var hourMinuteSecond: UILabel!
     
@@ -26,9 +26,9 @@ class DetailViewController: UIViewController {
 
         configureUI()
         loadData()
+        divideDate()
         
         navigationController?.navigationBar.prefersLargeTitles = true
-        divideDate()
     }
     
     func configureUI() {
@@ -52,10 +52,26 @@ class DetailViewController: UIViewController {
         meBackView.layer.shadowOpacity = 0.5
         meBackView.layer.shadowRadius = 4
         meBackView.backgroundColor = UIColor(hexCode: "F5F5F4")
+        
+        chatGptTextView.layer.cornerRadius = 10
+        chatGptTextView.clipsToBounds = false
+        chatGptTextView.layer.shadowColor = UIColor.darkGray.cgColor
+        chatGptTextView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        chatGptTextView.layer.shadowOpacity = 0.5
+        chatGptTextView.layer.shadowRadius = 4
+        chatGptTextView.backgroundColor = UIColor(hexCode: "F5F5F4")
+        
+        chatGptTextView.isScrollEnabled = true
+        chatGptTextView.isEditable = false
+        chatGptTextView.isSelectable = false
+        chatGptTextView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        chatGptTextView.textContainer.lineFragmentPadding = 0
+        chatGptTextView.layoutIfNeeded()
+        chatGptTextView.clipsToBounds = true
     }
 
     func loadData() {
-        answerLabel.text = gptAnswer
+        chatGptTextView.text = gptAnswer
         meLabel.text = myQuestion
     }
     

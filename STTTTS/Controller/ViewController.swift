@@ -15,7 +15,7 @@ import Firebase
 class ViewController: UIViewController {
     
     @IBOutlet weak var semiTitleLabel: UILabel!
-    @IBOutlet weak var chatGptLabel: UILabel!
+    @IBOutlet weak var chatGptTetxtView: UITextView!
     @IBOutlet weak var resultText: UILabel!
     @IBOutlet weak var startBtn: UIButton!
     
@@ -65,6 +65,21 @@ class ViewController: UIViewController {
         
         startBtn.layer.cornerRadius = 20
         startBtn.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        
+        chatGptTetxtView.layer.cornerRadius = 10
+        chatGptTetxtView.clipsToBounds = false
+        chatGptTetxtView.layer.shadowColor = UIColor.darkGray.cgColor
+        chatGptTetxtView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        chatGptTetxtView.layer.shadowOpacity = 0.5
+        chatGptTetxtView.layer.shadowRadius = 4
+        chatGptTetxtView.backgroundColor = UIColor(hexCode: "F5F5F4")
+        
+        chatGptTetxtView.isScrollEnabled = true
+        chatGptTetxtView.isEditable = false
+        chatGptTetxtView.isSelectable = false
+        chatGptTetxtView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        chatGptTetxtView.textContainer.lineFragmentPadding = 0
+        chatGptTetxtView.layoutIfNeeded()
     }
     
     
@@ -163,7 +178,7 @@ class ViewController: UIViewController {
         let dateString = formatter.string(from: date)
         
         let myQuestion = resultText.text ?? ""
-        let gptAnswer = chatGptLabel.text ?? ""
+        let gptAnswer = chatGptTetxtView.text ?? ""
         
         let historyItem: [String: Any] = [
             "createDate": dateString,
@@ -213,7 +228,7 @@ extension ViewController: AudioControllerDelegate {
                         
                         self?.askGPT(question: self?.resultSentence ?? "") { [weak self] response in
                             DispatchQueue.main.async {
-                                self?.chatGptLabel.text = response
+                                self?.chatGptTetxtView.text = response
                                 self?.saveDataToFirebase()
                             }
                         }

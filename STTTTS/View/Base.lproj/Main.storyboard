@@ -395,29 +395,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="NIH-vE-8BQ">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="262" width="393" height="590"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pw8-Hb-6fo">
-                                <rect key="frame" x="20" y="173" width="353" height="250"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVI-Zf-lAn">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="250"/>
-                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="qVI-Zf-lAn" firstAttribute="leading" secondItem="pw8-Hb-6fo" secondAttribute="leading" id="0Of-Ji-UPf"/>
-                                    <constraint firstItem="qVI-Zf-lAn" firstAttribute="top" secondItem="pw8-Hb-6fo" secondAttribute="top" id="RX6-yY-aVF"/>
-                                    <constraint firstAttribute="trailing" secondItem="qVI-Zf-lAn" secondAttribute="trailing" id="Vve-nc-zED"/>
-                                    <constraint firstAttribute="bottom" secondItem="qVI-Zf-lAn" secondAttribute="bottom" id="a2b-Ge-IF5"/>
-                                    <constraint firstItem="qVI-Zf-lAn" firstAttribute="centerX" secondItem="pw8-Hb-6fo" secondAttribute="centerX" id="fre-wg-vcf"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kas-wm-B4m">
-                                <rect key="frame" x="20" y="738" width="353" height="60"/>
+                                <rect key="frame" x="25" y="738" width="343" height="60"/>
                                 <color key="backgroundColor" red="0.88756245369999998" green="0.60403603319999999" blue="0.6078343987" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Rxu-ZW-0kr"/>
@@ -432,38 +413,74 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8w9-X2-J2H"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xy-4v-JbI">
-                                <rect key="frame" x="20" y="473" width="353" height="205"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="f7i-N9-Swm">
+                                <rect key="frame" x="25" y="149" width="343" height="324"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyv-JG-EIS">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="205"/>
-                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0W-GG-jsu">
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="24"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pw8-Hb-6fo">
+                                        <rect key="frame" x="0.0" y="24" width="343" height="300"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wjc-Da-cJC">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="300"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="Wfj-zl-Cln"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Wjc-Da-cJC" secondAttribute="bottom" id="Q0O-hK-RoU"/>
+                                            <constraint firstItem="Wjc-Da-cJC" firstAttribute="leading" secondItem="pw8-Hb-6fo" secondAttribute="leading" id="cvR-Sz-5WW"/>
+                                            <constraint firstItem="Wjc-Da-cJC" firstAttribute="top" secondItem="pw8-Hb-6fo" secondAttribute="top" id="n52-Qz-NaW"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wjc-Da-cJC" secondAttribute="trailing" id="ujp-vX-koW"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Wyv-JG-EIS" secondAttribute="trailing" id="Keo-8o-uDq"/>
-                                    <constraint firstItem="Wyv-JG-EIS" firstAttribute="leading" secondItem="6Xy-4v-JbI" secondAttribute="leading" id="Qi3-cb-Ht4"/>
-                                    <constraint firstItem="Wyv-JG-EIS" firstAttribute="leading" secondItem="6Xy-4v-JbI" secondAttribute="leading" id="jAb-UW-1VO"/>
-                                    <constraint firstItem="Wyv-JG-EIS" firstAttribute="centerX" secondItem="6Xy-4v-JbI" secondAttribute="centerX" id="lax-Ka-VAI"/>
-                                    <constraint firstItem="Wyv-JG-EIS" firstAttribute="centerY" secondItem="6Xy-4v-JbI" secondAttribute="centerY" id="mIu-Kc-RlK"/>
-                                    <constraint firstItem="Wyv-JG-EIS" firstAttribute="top" secondItem="6Xy-4v-JbI" secondAttribute="top" id="xSt-fB-pRT"/>
+                                    <constraint firstItem="pw8-Hb-6fo" firstAttribute="trailing" secondItem="f7i-N9-Swm" secondAttribute="trailingMargin" id="6jq-GG-ybL"/>
                                 </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPR-16-B2a">
-                                <rect key="frame" x="28" y="449" width="90" height="24"/>
-                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0W-GG-jsu">
-                                <rect key="frame" x="28" y="149" width="90" height="24"/>
-                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="I5x-B5-ohi">
+                                <rect key="frame" x="25" y="503" width="343" height="179"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPR-16-B2a">
+                                        <rect key="frame" x="0.0" y="0.0" width="26.333333333333332" height="24"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xy-4v-JbI">
+                                        <rect key="frame" x="0.0" y="24" width="343" height="155"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyv-JG-EIS">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Wyv-JG-EIS" secondAttribute="trailing" id="Keo-8o-uDq"/>
+                                            <constraint firstItem="Wyv-JG-EIS" firstAttribute="leading" secondItem="6Xy-4v-JbI" secondAttribute="leading" id="Qi3-cb-Ht4"/>
+                                            <constraint firstItem="Wyv-JG-EIS" firstAttribute="leading" secondItem="6Xy-4v-JbI" secondAttribute="leading" id="jAb-UW-1VO"/>
+                                            <constraint firstItem="Wyv-JG-EIS" firstAttribute="top" secondItem="6Xy-4v-JbI" secondAttribute="top" id="xSt-fB-pRT"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6Xy-4v-JbI" firstAttribute="trailing" secondItem="I5x-B5-ohi" secondAttribute="trailingMargin" id="R4z-Cg-Ubd"/>
+                                </constraints>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="궁금한 점들을 물어보세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keF-EQ-B1b">
                                 <rect key="frame" x="25" y="113" width="343" height="19"/>
                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="19"/>
@@ -474,30 +491,22 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pw8-Hb-6fo" firstAttribute="centerX" secondItem="NIH-vE-8BQ" secondAttribute="centerX" id="0xN-O1-3iM"/>
-                            <constraint firstItem="LPR-16-B2a" firstAttribute="trailing" secondItem="M0W-GG-jsu" secondAttribute="trailing" id="1Ko-tq-SKx"/>
-                            <constraint firstItem="pw8-Hb-6fo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="243-1J-SOm"/>
-                            <constraint firstItem="LPR-16-B2a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="4Ej-dS-KAK"/>
                             <constraint firstItem="keF-EQ-B1b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="9mg-ch-LoU"/>
-                            <constraint firstItem="6Xy-4v-JbI" firstAttribute="leading" secondItem="pw8-Hb-6fo" secondAttribute="leading" id="CDs-Ju-rf2"/>
-                            <constraint firstItem="6Xy-4v-JbI" firstAttribute="top" secondItem="LPR-16-B2a" secondAttribute="bottom" id="DDK-qN-d1n"/>
-                            <constraint firstItem="kas-wm-B4m" firstAttribute="top" secondItem="6Xy-4v-JbI" secondAttribute="bottom" constant="60" id="KUM-qh-Nfc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f7i-N9-Swm" secondAttribute="trailing" constant="25" id="Htk-Gx-3sQ"/>
                             <constraint firstItem="NIH-vE-8BQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="L3C-fQ-FUB"/>
-                            <constraint firstItem="6Xy-4v-JbI" firstAttribute="top" secondItem="pw8-Hb-6fo" secondAttribute="bottom" constant="50" id="LIE-YZ-Tuj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pw8-Hb-6fo" secondAttribute="trailing" constant="20" id="MQH-XL-WQQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kas-wm-B4m" secondAttribute="bottom" constant="20" id="OHo-pj-EKX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kas-wm-B4m" secondAttribute="trailing" constant="20" id="ZD9-b8-AOh"/>
-                            <constraint firstItem="LPR-16-B2a" firstAttribute="leading" secondItem="M0W-GG-jsu" secondAttribute="leading" id="ZUz-1E-Heg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I5x-B5-ohi" secondAttribute="trailing" constant="25" id="RMb-xF-M6P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kas-wm-B4m" secondAttribute="trailing" constant="25" id="ZD9-b8-AOh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="keF-EQ-B1b" secondAttribute="trailing" constant="25" id="Zya-zj-S5K"/>
+                            <constraint firstItem="f7i-N9-Swm" firstAttribute="top" secondItem="keF-EQ-B1b" secondAttribute="bottom" constant="17" id="djY-6m-CuN"/>
                             <constraint firstItem="keF-EQ-B1b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="eVv-80-FrP"/>
-                            <constraint firstItem="6Xy-4v-JbI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kfS-co-mFv"/>
-                            <constraint firstItem="kas-wm-B4m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mpN-lq-i12"/>
-                            <constraint firstItem="6Xy-4v-JbI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="473" id="n3a-CZ-qAg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Xy-4v-JbI" secondAttribute="trailing" constant="20" id="p1a-eI-qQH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LPR-16-B2a" secondAttribute="trailing" constant="275" id="pcP-8f-flQ"/>
-                            <constraint firstItem="pw8-Hb-6fo" firstAttribute="top" secondItem="M0W-GG-jsu" secondAttribute="bottom" id="vAl-aX-QMr"/>
+                            <constraint firstItem="I5x-B5-ohi" firstAttribute="top" secondItem="f7i-N9-Swm" secondAttribute="bottom" constant="30" id="kIY-zZ-Bl5"/>
+                            <constraint firstItem="kas-wm-B4m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="mpN-lq-i12"/>
+                            <constraint firstItem="I5x-B5-ohi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="olP-6n-fWs"/>
+                            <constraint firstItem="f7i-N9-Swm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="uRD-SU-JEC"/>
+                            <constraint firstItem="kas-wm-B4m" firstAttribute="top" secondItem="I5x-B5-ohi" secondAttribute="bottom" constant="56" id="wj5-F5-a7B"/>
+                            <constraint firstItem="f7i-N9-Swm" firstAttribute="centerX" secondItem="NIH-vE-8BQ" secondAttribute="centerX" id="xEC-li-J44"/>
                             <constraint firstAttribute="bottomMargin" secondItem="NIH-vE-8BQ" secondAttribute="bottom" constant="-34" id="y8h-av-tQH"/>
-                            <constraint firstItem="NIH-vE-8BQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yYH-gU-Tez"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="XRg-iC-moc"/>
@@ -522,7 +531,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerBackView" destination="pw8-Hb-6fo" id="dfh-nF-iVY"/>
-                        <outlet property="chatGptLabel" destination="qVI-Zf-lAn" id="hdU-9f-Toc"/>
+                        <outlet property="chatGptTetxtView" destination="Wjc-Da-cJC" id="Tg7-YO-Jt8"/>
                         <outlet property="meBackView" destination="6Xy-4v-JbI" id="qlc-w5-t9f"/>
                         <outlet property="resultText" destination="Wyv-JG-EIS" id="tOW-hU-ryN"/>
                         <outlet property="semiTitleLabel" destination="keF-EQ-B1b" id="Y1O-yg-kwJ"/>
@@ -531,7 +540,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1715" y="-35"/>
+            <point key="canvasLocation" x="1713.740458015267" y="-35.211267605633807"/>
         </scene>
         <!--Item-->
         <scene sceneID="byz-Fu-ia3">
@@ -604,7 +613,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="RVu-yv-rPE">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="947.33333333333337"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification 🩵" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2k-vS-A9M">
                                 <rect key="frame" x="40" y="123" width="313" height="49"/>
@@ -612,118 +621,122 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="oNT-0s-dsw">
-                                <rect key="frame" x="30" y="242.00000000000003" width="333" height="38.333333333333343"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yeg-2l-8Fz">
+                                <rect key="frame" x="20" y="221.99999999999997" width="353" height="503.33333333333326"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1️⃣ 첫 번째" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qi5-8E-G8X">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="23"/>
-                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="23"/>
-                                        <color key="textColor" red="0.61907339100000003" green="0.35097110269999998" blue="0.93638724090000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 프로젝트는 저의 스터디 학습용 프로젝트 입니다! ✏️" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEV-VN-QM9">
-                                        <rect key="frame" x="0.0" y="24" width="333" height="14.333333333333336"/>
-                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="Yx8-DT-Q1U">
+                                        <rect key="frame" x="5" y="30" width="343" height="413.33333333333331"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oNT-0s-dsw">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="42.333333333333336"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1️⃣ 첫 번째" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qi5-8E-G8X">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="23"/>
+                                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="23"/>
+                                                        <color key="textColor" red="0.61907339100000003" green="0.35097110269999998" blue="0.93638724090000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 프로젝트는 저의 스터디 학습용 프로젝트 입니다! ✏️" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEV-VN-QM9">
+                                                        <rect key="frame" x="0.0" y="27.999999999999996" width="343" height="14.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OTm-Qd-MHZ">
+                                                <rect key="frame" x="0.0" y="84.333333333333314" width="343" height="56.333333333333343"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2️⃣ 두 번째" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCe-mY-71G">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="23"/>
+                                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="23"/>
+                                                        <color key="textColor" red="0.61907339100000003" green="0.35097110269999998" blue="0.93638724090000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 프로젝트의 주된 목적은 Auth 로그인, 구글/OpenAI API 사용 방법 공부 입니다! 🎨" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0s-Rq-5RO">
+                                                        <rect key="frame" x="0.0" y="28" width="343" height="28.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ChK-f6-4dm">
+                                                <rect key="frame" x="0.0" y="182.66666666666669" width="343" height="118.33333333333331"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3️⃣ 세 번째" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9P-zw-CzY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="23"/>
+                                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="23"/>
+                                                        <color key="textColor" red="0.61907339100000003" green="0.35097110269999998" blue="0.93638724090000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 프로젝트에 적용된 디자인은 'https://www.youtube.com/watch?v=h4vyOz4Tztg&amp;t=8956s' 를 참고한 것입니다.👍💙" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIs-lW-Aus">
+                                                        <rect key="frame" x="0.0" y="28.000000000000004" width="343" height="56.333333333333343"/>
+                                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37o-uf-Vfq">
+                                                        <rect key="frame" x="0.0" y="89.333333333333314" width="343" height="29"/>
+                                                        <color key="backgroundColor" red="0.85586160420000001" green="0.43608242270000003" blue="0.4903922081" alpha="0.79814026687318917" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="참고 영상 보러가기🚀">
+                                                            <color key="titleColor" red="0.91354304549999998" green="0.80974155660000002" blue="0.89804881810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="refButtonTapped:" destination="sA6-S5-Y6f" eventType="touchUpInside" id="ypb-jR-wwp"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RWJ-bz-EF6">
+                                                <rect key="frame" x="0.0" y="343" width="343" height="70.333333333333314"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4️⃣ 네 번째" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csy-4x-Xum">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="23"/>
+                                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="23"/>
+                                                        <color key="textColor" red="0.61907339100000003" green="0.35097110269999998" blue="0.93638724090000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 프로젝트를 git clone해서 사용할 때에는 파이어베이스 사용자 등록, 구글 STT API Key, OpenAI API Key가 필요합니다! 🔑" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAg-0d-yyl">
+                                                        <rect key="frame" x="0.0" y="28.000000000000004" width="343" height="42.333333333333343"/>
+                                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="OTm-Qd-MHZ">
-                                <rect key="frame" x="30" y="350.33333333333331" width="333" height="52.333333333333314"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2️⃣ 두 번째" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCe-mY-71G">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="23"/>
-                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="23"/>
-                                        <color key="textColor" red="0.61907339100000003" green="0.35097110269999998" blue="0.93638724090000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 프로젝트의 주된 목적은 Auth 로그인, 구글/OpenAI API 사용 방법 공부 입니다! 🎨" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0s-Rq-5RO">
-                                        <rect key="frame" x="0.0" y="24" width="333" height="28.333333333333329"/>
-                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ChK-f6-4dm">
-                                <rect key="frame" x="30" y="472.66666666666669" width="333" height="80.333333333333314"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3️⃣ 세 번째" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9P-zw-CzY">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="23"/>
-                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="23"/>
-                                        <color key="textColor" red="0.61907339100000003" green="0.35097110269999998" blue="0.93638724090000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 프로젝트에 적용된 디자인은 'https://www.youtube.com/watch?v=h4vyOz4Tztg&amp;t=8956s' 를 참고한 것입니다.👍💙" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIs-lW-Aus">
-                                        <rect key="frame" x="0.0" y="24.000000000000004" width="333" height="56.333333333333343"/>
-                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37o-uf-Vfq">
-                                <rect key="frame" x="213" y="553" width="150" height="29"/>
-                                <color key="backgroundColor" red="0.85586160420000001" green="0.43608242270000003" blue="0.4903922081" alpha="0.79814026687318917" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="ni0-fg-94z"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yx8-DT-Q1U" secondAttribute="trailing" constant="5" id="57r-N3-STP"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yx8-DT-Q1U" secondAttribute="bottom" constant="60" id="fFl-EB-Zug"/>
+                                    <constraint firstItem="Yx8-DT-Q1U" firstAttribute="leading" secondItem="Yeg-2l-8Fz" secondAttribute="leading" constant="5" id="gVq-T4-yxO"/>
+                                    <constraint firstItem="Yx8-DT-Q1U" firstAttribute="top" secondItem="Yeg-2l-8Fz" secondAttribute="top" constant="30" id="p98-fl-tt0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="참고 영상 보러가기🚀">
-                                    <color key="titleColor" red="0.91354304549999998" green="0.80974155660000002" blue="0.89804881810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="refButtonTapped:" destination="sA6-S5-Y6f" eventType="touchUpInside" id="ypb-jR-wwp"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="RWJ-bz-EF6">
-                                <rect key="frame" x="30" y="612" width="333" height="66.333333333333371"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4️⃣ 네 번째" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csy-4x-Xum">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="23"/>
-                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="23"/>
-                                        <color key="textColor" red="0.61907339100000003" green="0.35097110269999998" blue="0.93638724090000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 프로젝트를 git clone해서 사용할 때에는 파이어베이스 사용자 등록, 구글 STT API Key, OpenAI API Key가 필요합니다! 🔑" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAg-0d-yyl">
-                                        <rect key="frame" x="0.0" y="24.000000000000004" width="333" height="42.333333333333343"/>
-                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ix0-MW-MQH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="37o-uf-Vfq" firstAttribute="top" secondItem="ChK-f6-4dm" secondAttribute="bottom" id="1he-XU-Av1"/>
+                            <constraint firstItem="Yeg-2l-8Fz" firstAttribute="top" secondItem="l2k-vS-A9M" secondAttribute="bottom" constant="50" id="9Ll-GV-tLU"/>
                             <constraint firstItem="RVu-yv-rPE" firstAttribute="trailing" secondItem="ix0-MW-MQH" secondAttribute="trailing" id="9l2-5G-cag"/>
-                            <constraint firstAttribute="trailing" secondItem="oNT-0s-dsw" secondAttribute="trailing" constant="30" id="CO9-yI-8Wo"/>
-                            <constraint firstItem="ChK-f6-4dm" firstAttribute="leading" secondItem="ix0-MW-MQH" secondAttribute="leading" constant="30" id="EUK-gA-A9T"/>
+                            <constraint firstItem="ix0-MW-MQH" firstAttribute="trailing" secondItem="Yeg-2l-8Fz" secondAttribute="trailing" constant="20" id="9sJ-d5-5I4"/>
                             <constraint firstItem="l2k-vS-A9M" firstAttribute="leading" secondItem="ix0-MW-MQH" secondAttribute="leading" constant="40" id="IL4-Uy-rOI"/>
-                            <constraint firstItem="ix0-MW-MQH" firstAttribute="trailing" secondItem="37o-uf-Vfq" secondAttribute="trailing" constant="30" id="M4o-Py-2gg"/>
-                            <constraint firstItem="RWJ-bz-EF6" firstAttribute="top" secondItem="37o-uf-Vfq" secondAttribute="bottom" constant="30" id="NqG-78-UFc"/>
                             <constraint firstItem="RVu-yv-rPE" firstAttribute="top" secondItem="Yy2-T8-W7C" secondAttribute="top" id="Oze-e2-KHd"/>
                             <constraint firstItem="l2k-vS-A9M" firstAttribute="top" secondItem="ix0-MW-MQH" secondAttribute="top" constant="20" id="RTU-5f-5ZI"/>
                             <constraint firstItem="ix0-MW-MQH" firstAttribute="trailing" secondItem="l2k-vS-A9M" secondAttribute="trailing" constant="40" id="TG8-PG-yt2"/>
-                            <constraint firstItem="oNT-0s-dsw" firstAttribute="top" secondItem="l2k-vS-A9M" secondAttribute="bottom" constant="70" id="YYy-GK-v1Q"/>
-                            <constraint firstItem="RWJ-bz-EF6" firstAttribute="leading" secondItem="ix0-MW-MQH" secondAttribute="leading" constant="30" id="ZNb-pq-hLI"/>
-                            <constraint firstItem="OTm-Qd-MHZ" firstAttribute="top" secondItem="oNT-0s-dsw" secondAttribute="bottom" constant="70" id="e7w-LA-4F1"/>
-                            <constraint firstItem="oNT-0s-dsw" firstAttribute="leading" secondItem="ix0-MW-MQH" secondAttribute="leading" constant="30" id="f5K-Xj-kcP"/>
-                            <constraint firstItem="ChK-f6-4dm" firstAttribute="top" secondItem="OTm-Qd-MHZ" secondAttribute="bottom" constant="70" id="lyS-Xd-uie"/>
-                            <constraint firstItem="OTm-Qd-MHZ" firstAttribute="leading" secondItem="ix0-MW-MQH" secondAttribute="leading" constant="30" id="nFV-EZ-Une"/>
-                            <constraint firstItem="ix0-MW-MQH" firstAttribute="trailing" secondItem="OTm-Qd-MHZ" secondAttribute="trailing" constant="30" id="o6J-Ip-z7o"/>
-                            <constraint firstAttribute="trailing" secondItem="ChK-f6-4dm" secondAttribute="trailing" constant="30" id="rxh-5X-mBa"/>
+                            <constraint firstItem="Yeg-2l-8Fz" firstAttribute="leading" secondItem="ix0-MW-MQH" secondAttribute="leading" constant="20" id="evf-eo-P4N"/>
                             <constraint firstItem="RVu-yv-rPE" firstAttribute="leading" secondItem="ix0-MW-MQH" secondAttribute="leading" id="thC-F9-bkq"/>
-                            <constraint firstAttribute="bottom" secondItem="RVu-yv-rPE" secondAttribute="bottom" id="w69-Sj-FLd"/>
-                            <constraint firstAttribute="trailing" secondItem="RWJ-bz-EF6" secondAttribute="trailing" constant="30" id="zC8-XG-6ZI"/>
+                            <constraint firstItem="Yeg-2l-8Fz" firstAttribute="centerY" secondItem="RVu-yv-rPE" secondAttribute="centerY" id="zGx-2l-77j"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Iyg-kx-5ny"/>
                     <connections>
+                        <outlet property="backView" destination="Yeg-2l-8Fz" id="1Ms-La-9iR"/>
                         <outlet property="first" destination="Qi5-8E-G8X" id="rxU-3f-znG"/>
                         <outlet property="fourth" destination="Csy-4x-Xum" id="kyC-5G-Vta"/>
                         <outlet property="refButton" destination="37o-uf-Vfq" id="0ms-yj-k14"/>
@@ -747,118 +760,126 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="zdy-Cp-uvp">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lv-nh-n6b">
+                                <rect key="frame" x="25.000000000000007" y="64" width="104.66666666666669" height="53.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="38"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="내가 나누었던 대화" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QH8-TM-2Ec">
-                                <rect key="frame" x="25" y="194" width="343" height="20"/>
+                                <rect key="frame" x="25" y="142.33333333333334" width="343" height="20"/>
                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="20"/>
                                 <color key="textColor" red="0.85586160420000001" green="0.43608242270000003" blue="0.4903922081" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jq-Oi-WDO">
-                                <rect key="frame" x="20" y="298" width="353" height="280"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Kll-IQ-WZN">
+                                <rect key="frame" x="25" y="264" width="343" height="324"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezM-6u-ZQO">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="280"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="280" id="JFi-Z6-b0E"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4f-5z-BIC">
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="24"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="ezM-6u-ZQO" firstAttribute="centerY" secondItem="4jq-Oi-WDO" secondAttribute="centerY" id="8jG-JH-OWT"/>
-                                    <constraint firstItem="ezM-6u-ZQO" firstAttribute="leading" secondItem="4jq-Oi-WDO" secondAttribute="leading" id="JiW-Kn-YSH"/>
-                                    <constraint firstAttribute="bottom" secondItem="ezM-6u-ZQO" secondAttribute="bottom" id="eFn-mf-tnR"/>
-                                    <constraint firstItem="ezM-6u-ZQO" firstAttribute="leading" secondItem="4jq-Oi-WDO" secondAttribute="leading" id="gFh-dY-s48"/>
-                                    <constraint firstItem="ezM-6u-ZQO" firstAttribute="centerX" secondItem="4jq-Oi-WDO" secondAttribute="centerX" id="i3m-g8-EPg"/>
-                                    <constraint firstAttribute="trailing" secondItem="ezM-6u-ZQO" secondAttribute="trailing" id="rNP-9Q-8y6"/>
-                                    <constraint firstItem="ezM-6u-ZQO" firstAttribute="top" secondItem="4jq-Oi-WDO" secondAttribute="top" id="xDJ-qp-fUW"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alF-rj-Sma">
-                                <rect key="frame" x="25" y="604" width="66" height="24"/>
-                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVo-Tg-DxI">
-                                <rect key="frame" x="20" y="628" width="353" height="160"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WC9-ZW-22T">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="160"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jq-Oi-WDO">
+                                        <rect key="frame" x="0.0" y="24" width="343" height="300"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Xw-SB-P32">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="300"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="G9u-LW-4TT"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="160" id="IB0-mB-Hqb"/>
+                                            <constraint firstItem="8Xw-SB-P32" firstAttribute="leading" secondItem="4jq-Oi-WDO" secondAttribute="leading" id="APv-Vp-adV"/>
+                                            <constraint firstAttribute="trailing" secondItem="8Xw-SB-P32" secondAttribute="trailing" id="JZP-ST-XpF"/>
+                                            <constraint firstAttribute="bottom" secondItem="8Xw-SB-P32" secondAttribute="bottom" id="KG0-bi-F2A"/>
+                                            <constraint firstItem="8Xw-SB-P32" firstAttribute="top" secondItem="4jq-Oi-WDO" secondAttribute="top" id="mVi-Xh-XmK"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4jq-Oi-WDO" secondAttribute="trailing" id="HsM-un-Z2t"/>
+                                    <constraint firstAttribute="bottom" secondItem="4jq-Oi-WDO" secondAttribute="bottom" id="Ohn-3w-v1x"/>
+                                    <constraint firstItem="4jq-Oi-WDO" firstAttribute="leading" secondItem="Kll-IQ-WZN" secondAttribute="leading" id="PgL-VN-cD3"/>
+                                    <constraint firstItem="4jq-Oi-WDO" firstAttribute="top" secondItem="f4f-5z-BIC" secondAttribute="bottom" id="SB5-m7-9TJ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="fQr-H5-fyg">
+                                <rect key="frame" x="25" y="613" width="343" height="184"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alF-rj-Sma">
+                                        <rect key="frame" x="0.0" y="0.0" width="26.333333333333332" height="24"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVo-Tg-DxI">
+                                        <rect key="frame" x="0.0" y="24" width="343" height="160"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WC9-ZW-22T">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="160"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="160" id="IB0-mB-Hqb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="WC9-ZW-22T" firstAttribute="top" secondItem="uVo-Tg-DxI" secondAttribute="top" id="08o-pd-2TT"/>
+                                            <constraint firstAttribute="bottom" secondItem="WC9-ZW-22T" secondAttribute="bottom" id="512-bp-5fI"/>
+                                            <constraint firstItem="WC9-ZW-22T" firstAttribute="top" secondItem="uVo-Tg-DxI" secondAttribute="top" id="IR6-GB-wzg"/>
+                                            <constraint firstItem="WC9-ZW-22T" firstAttribute="leading" secondItem="uVo-Tg-DxI" secondAttribute="leading" id="It7-25-JvZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="WC9-ZW-22T" secondAttribute="trailing" id="JOh-ah-DHA"/>
+                                            <constraint firstItem="WC9-ZW-22T" firstAttribute="leading" secondItem="uVo-Tg-DxI" secondAttribute="leading" id="cff-Gf-6fB"/>
+                                            <constraint firstAttribute="trailing" secondItem="WC9-ZW-22T" secondAttribute="trailing" id="crs-mo-bel"/>
+                                            <constraint firstAttribute="bottom" secondItem="WC9-ZW-22T" secondAttribute="bottom" id="hee-By-Ia6"/>
+                                            <constraint firstAttribute="trailing" secondItem="WC9-ZW-22T" secondAttribute="trailing" id="sRe-fX-DiJ"/>
+                                            <constraint firstItem="WC9-ZW-22T" firstAttribute="top" secondItem="uVo-Tg-DxI" secondAttribute="top" id="wvc-yD-2sY"/>
+                                            <constraint firstItem="WC9-ZW-22T" firstAttribute="leading" secondItem="uVo-Tg-DxI" secondAttribute="leading" id="y5O-4q-pv5"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="WC9-ZW-22T" firstAttribute="top" secondItem="uVo-Tg-DxI" secondAttribute="top" id="08o-pd-2TT"/>
-                                    <constraint firstAttribute="bottom" secondItem="WC9-ZW-22T" secondAttribute="bottom" id="512-bp-5fI"/>
-                                    <constraint firstItem="WC9-ZW-22T" firstAttribute="top" secondItem="uVo-Tg-DxI" secondAttribute="top" id="IR6-GB-wzg"/>
-                                    <constraint firstItem="WC9-ZW-22T" firstAttribute="leading" secondItem="uVo-Tg-DxI" secondAttribute="leading" id="It7-25-JvZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="WC9-ZW-22T" secondAttribute="trailing" id="JOh-ah-DHA"/>
-                                    <constraint firstItem="WC9-ZW-22T" firstAttribute="leading" secondItem="uVo-Tg-DxI" secondAttribute="leading" id="cff-Gf-6fB"/>
-                                    <constraint firstAttribute="trailing" secondItem="WC9-ZW-22T" secondAttribute="trailing" id="crs-mo-bel"/>
-                                    <constraint firstAttribute="bottom" secondItem="WC9-ZW-22T" secondAttribute="bottom" id="hee-By-Ia6"/>
-                                    <constraint firstAttribute="trailing" secondItem="WC9-ZW-22T" secondAttribute="trailing" id="sRe-fX-DiJ"/>
-                                    <constraint firstItem="WC9-ZW-22T" firstAttribute="top" secondItem="uVo-Tg-DxI" secondAttribute="top" id="wvc-yD-2sY"/>
-                                    <constraint firstItem="WC9-ZW-22T" firstAttribute="leading" secondItem="uVo-Tg-DxI" secondAttribute="leading" id="y5O-4q-pv5"/>
+                                    <constraint firstItem="uVo-Tg-DxI" firstAttribute="leading" secondItem="fQr-H5-fyg" secondAttribute="leading" id="6Mi-N1-RWw"/>
+                                    <constraint firstAttribute="bottom" secondItem="uVo-Tg-DxI" secondAttribute="bottom" id="MJm-CH-g9T"/>
+                                    <constraint firstAttribute="trailing" secondItem="uVo-Tg-DxI" secondAttribute="trailing" id="oig-mL-iPy"/>
+                                    <constraint firstItem="uVo-Tg-DxI" firstAttribute="top" secondItem="alF-rj-Sma" secondAttribute="bottom" id="xnX-jn-rhI"/>
                                 </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4f-5z-BIC">
-                                <rect key="frame" x="25" y="274" width="66" height="24"/>
-                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lv-nh-n6b">
-                                <rect key="frame" x="17" y="134" width="68.666666666666671" height="35"/>
-                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="25"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b1p-Db-2Tm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4jq-Oi-WDO" firstAttribute="leading" secondItem="uVo-Tg-DxI" secondAttribute="leading" id="7as-Pz-6Og"/>
                             <constraint firstAttribute="bottom" secondItem="zdy-Cp-uvp" secondAttribute="bottom" id="96I-tw-tTG"/>
-                            <constraint firstItem="b1p-Db-2Tm" firstAttribute="bottom" secondItem="uVo-Tg-DxI" secondAttribute="bottom" constant="30" id="Abs-BA-K3K"/>
-                            <constraint firstItem="f4f-5z-BIC" firstAttribute="leading" secondItem="b1p-Db-2Tm" secondAttribute="leading" constant="25" id="Hzr-j0-wql"/>
-                            <constraint firstItem="4jq-Oi-WDO" firstAttribute="trailing" secondItem="uVo-Tg-DxI" secondAttribute="trailing" id="KCm-y0-yy6"/>
-                            <constraint firstItem="f4f-5z-BIC" firstAttribute="top" secondItem="QH8-TM-2Ec" secondAttribute="bottom" constant="60" id="KKp-Bn-zuA"/>
-                            <constraint firstItem="4jq-Oi-WDO" firstAttribute="leading" secondItem="b1p-Db-2Tm" secondAttribute="leading" constant="20" id="Kzu-x8-iTt"/>
+                            <constraint firstItem="fQr-H5-fyg" firstAttribute="leading" secondItem="b1p-Db-2Tm" secondAttribute="leading" constant="25" id="IRL-7a-F8Y"/>
+                            <constraint firstItem="b1p-Db-2Tm" firstAttribute="trailing" secondItem="Kll-IQ-WZN" secondAttribute="trailing" constant="25" id="NTU-aA-35H"/>
                             <constraint firstItem="QH8-TM-2Ec" firstAttribute="top" secondItem="8Lv-nh-n6b" secondAttribute="bottom" constant="25" id="NrT-Nb-D9Z"/>
-                            <constraint firstItem="b1p-Db-2Tm" firstAttribute="bottom" secondItem="uVo-Tg-DxI" secondAttribute="bottom" constant="30" id="P7Z-lZ-X9R"/>
-                            <constraint firstItem="uVo-Tg-DxI" firstAttribute="top" secondItem="alF-rj-Sma" secondAttribute="bottom" id="SWO-Gc-Faa"/>
+                            <constraint firstItem="8Lv-nh-n6b" firstAttribute="top" secondItem="b1p-Db-2Tm" secondAttribute="top" constant="5" id="OPU-m4-xzr"/>
                             <constraint firstItem="QH8-TM-2Ec" firstAttribute="leading" secondItem="b1p-Db-2Tm" secondAttribute="leading" constant="25" id="TDp-Zb-t8O"/>
-                            <constraint firstItem="4jq-Oi-WDO" firstAttribute="top" secondItem="f4f-5z-BIC" secondAttribute="bottom" id="UgG-mH-o9h"/>
+                            <constraint firstItem="Kll-IQ-WZN" firstAttribute="centerY" secondItem="zdy-Cp-uvp" secondAttribute="centerY" id="U4e-QG-DVp"/>
+                            <constraint firstItem="b1p-Db-2Tm" firstAttribute="trailing" secondItem="fQr-H5-fyg" secondAttribute="trailing" constant="25" id="URp-Lw-FZf"/>
+                            <constraint firstItem="8Lv-nh-n6b" firstAttribute="leading" secondItem="b1p-Db-2Tm" secondAttribute="leading" constant="25" id="Upq-TG-Jq7"/>
                             <constraint firstItem="b1p-Db-2Tm" firstAttribute="trailing" secondItem="QH8-TM-2Ec" secondAttribute="trailing" constant="25" id="WMV-EB-Qao"/>
-                            <constraint firstItem="b1p-Db-2Tm" firstAttribute="trailing" secondItem="uVo-Tg-DxI" secondAttribute="trailing" constant="20" id="Y0z-Bt-d40"/>
                             <constraint firstItem="zdy-Cp-uvp" firstAttribute="leading" secondItem="b1p-Db-2Tm" secondAttribute="leading" id="ZC6-rh-F6R"/>
-                            <constraint firstAttribute="bottom" secondItem="4jq-Oi-WDO" secondAttribute="bottom" constant="274" id="cKl-tv-5eX"/>
-                            <constraint firstItem="f4f-5z-BIC" firstAttribute="trailing" secondItem="alF-rj-Sma" secondAttribute="trailing" id="dvx-k4-KWr"/>
-                            <constraint firstItem="uVo-Tg-DxI" firstAttribute="top" secondItem="alF-rj-Sma" secondAttribute="bottom" id="fz7-FB-SGF"/>
-                            <constraint firstItem="alF-rj-Sma" firstAttribute="top" secondItem="4jq-Oi-WDO" secondAttribute="bottom" constant="26" id="gfq-aV-WTc"/>
+                            <constraint firstItem="fQr-H5-fyg" firstAttribute="top" secondItem="Kll-IQ-WZN" secondAttribute="bottom" constant="25" id="aHt-fG-OSK"/>
+                            <constraint firstItem="Kll-IQ-WZN" firstAttribute="leading" secondItem="b1p-Db-2Tm" secondAttribute="leading" constant="25" id="hDs-nu-iv3"/>
                             <constraint firstItem="zdy-Cp-uvp" firstAttribute="top" secondItem="8ed-8t-T9G" secondAttribute="top" id="jhS-z6-Ttu"/>
-                            <constraint firstItem="4jq-Oi-WDO" firstAttribute="top" secondItem="f4f-5z-BIC" secondAttribute="bottom" id="kHe-Lw-pfS"/>
-                            <constraint firstItem="uVo-Tg-DxI" firstAttribute="leading" secondItem="b1p-Db-2Tm" secondAttribute="leading" constant="20" id="n9M-Bo-ghJ"/>
-                            <constraint firstItem="8Lv-nh-n6b" firstAttribute="leading" secondItem="b1p-Db-2Tm" secondAttribute="leading" constant="17" id="qAi-eQ-vqG"/>
-                            <constraint firstItem="alF-rj-Sma" firstAttribute="leading" secondItem="b1p-Db-2Tm" secondAttribute="leading" constant="25" id="quT-5E-8dT"/>
-                            <constraint firstItem="uVo-Tg-DxI" firstAttribute="top" secondItem="alF-rj-Sma" secondAttribute="bottom" id="t3u-xI-wr9"/>
                             <constraint firstItem="zdy-Cp-uvp" firstAttribute="trailing" secondItem="b1p-Db-2Tm" secondAttribute="trailing" id="w2d-R1-AoL"/>
-                            <constraint firstItem="4jq-Oi-WDO" firstAttribute="centerX" secondItem="QH8-TM-2Ec" secondAttribute="centerX" id="ybn-4Y-IEu"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="answerBackView" destination="4jq-Oi-WDO" id="dlc-ZF-TFh"/>
-                        <outlet property="answerLabel" destination="ezM-6u-ZQO" id="Ac1-Xq-zga"/>
+                        <outlet property="chatGptTextView" destination="8Xw-SB-P32" id="7Sz-cd-kJT"/>
                         <outlet property="hourMinuteSecond" destination="8Lv-nh-n6b" id="sGO-33-pjz"/>
                         <outlet property="meBackView" destination="uVo-Tg-DxI" id="yMO-zN-g5e"/>
                         <outlet property="meLabel" destination="WC9-ZW-22T" id="5S1-fC-aie"/>
@@ -900,6 +921,9 @@
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="person.line.dotted.person.fill" catalog="system" width="128" height="58"/>
         <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="109"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

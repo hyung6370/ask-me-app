@@ -16,6 +16,7 @@ class NotificationViewController: UIViewController {
     @IBOutlet weak var third: UILabel!
     @IBOutlet weak var fourth: UILabel!
     
+    @IBOutlet weak var backView: UIView!
     
     @IBOutlet weak var refButton: UIButton!
     
@@ -53,6 +54,14 @@ class NotificationViewController: UIViewController {
         
         refButton.layer.cornerRadius = 15
         refButton.clipsToBounds = true
+        
+        backView.layer.cornerRadius = 10
+        backView.clipsToBounds = false
+        backView.layer.shadowColor = UIColor.darkGray.cgColor
+        backView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        backView.layer.shadowOpacity = 0.5
+        backView.layer.shadowRadius = 4
+        backView.backgroundColor = UIColor(hexCode: "F5F5F4")
     }
 
     @IBAction func refButtonTapped(_ sender: UIButton) {
