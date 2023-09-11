@@ -13,7 +13,8 @@ protocol AudioControllerDelegate {
 }
 
 class AudioController {
-  var remoteIOUnit: AudioComponentInstance? // optional to allow it to be an inout argument
+    
+  var remoteIOUnit: AudioComponentInstance?
   var delegate : AudioControllerDelegate!
 
   static var sharedInstance = AudioController()
@@ -38,7 +39,6 @@ class AudioController {
     print("hardware sample rate = \(sampleRate), using specified rate = \(specifiedSampleRate)")
     sampleRate = Double(specifiedSampleRate)
 
-    // Describe the RemoteIO unit
     var audioComponentDescription = AudioComponentDescription()
     audioComponentDescription.componentType = kAudioUnitType_Output;
     audioComponentDescription.componentSubType = kAudioUnitSubType_RemoteIO;
@@ -46,7 +46,6 @@ class AudioController {
     audioComponentDescription.componentFlags = 0;
     audioComponentDescription.componentFlagsMask = 0;
 
-    // Get the RemoteIO unit
     let remoteIOComponent = AudioComponentFindNext(nil, &audioComponentDescription)
     status = AudioComponentInstanceNew(remoteIOComponent!, &remoteIOUnit)
     if (status != noErr) {
@@ -56,7 +55,6 @@ class AudioController {
     let bus1 : AudioUnitElement = 1
     var oneFlag : UInt32 = 1
 
-    // Configure the RemoteIO unit for input
     status = AudioUnitSetProperty(remoteIOUnit!,
                                   kAudioOutputUnitProperty_EnableIO,
                                   kAudioUnitScope_Input,
@@ -67,7 +65,6 @@ class AudioController {
       return status
     }
 
-    // Set format for mic input (bus 1) on RemoteIO's output scope
     var asbd = AudioStreamBasicDescription()
     asbd.mSampleRate = sampleRate
     asbd.mFormatID = kAudioFormatLinearPCM
@@ -87,7 +84,6 @@ class AudioController {
       return status
     }
 
-    // Set the recording callback
     var callbackStruct = AURenderCallbackStruct()
     callbackStruct.inputProc = recordingCallback
     callbackStruct.inputProcRefCon = nil
@@ -101,7 +97,6 @@ class AudioController {
       return status
     }
 
-    // Initialize the RemoteIO unit
     return AudioUnitInitialize(remoteIOUnit!)
   }
 
@@ -134,7 +129,6 @@ func recordingCallback(
   buffers[0].mDataByteSize = inNumberFrames * 2
   buffers[0].mData = nil
 
-  // get the recorded samples
   status = AudioUnitRender(AudioController.sharedInstance.remoteIOUnit!,
                            ioActionFlags,
                            inTimeStamp,

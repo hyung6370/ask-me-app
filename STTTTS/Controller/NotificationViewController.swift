@@ -69,6 +69,4 @@ class NotificationViewController: UIViewController {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
-    
-
 }

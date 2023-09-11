@@ -152,7 +152,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 / 회원가입을 하여 'Ask me' 앱을 사용해보세요! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVx-Jp-Cao">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원가입을 하여 'Ask me' 앱을 사용해보세요! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVx-Jp-Cao">
                                         <rect key="frame" x="30" y="84.666666666666657" width="303" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="FaK-L7-n7y"/>
@@ -613,16 +613,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="RVu-yv-rPE">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="947.33333333333337"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="927.33333333333337"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification 🩵" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2k-vS-A9M">
-                                <rect key="frame" x="40" y="123" width="313" height="49"/>
+                                <rect key="frame" x="40" y="113" width="313" height="49"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yeg-2l-8Fz">
-                                <rect key="frame" x="20" y="221.99999999999997" width="353" height="503.33333333333326"/>
+                                <rect key="frame" x="20" y="211.99999999999997" width="353" height="503.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="Yx8-DT-Q1U">
                                         <rect key="frame" x="5" y="30" width="343" height="413.33333333333331"/>
@@ -682,7 +682,7 @@
                                                         <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="참고 영상 보러가기🚀">
-                                                            <color key="titleColor" red="0.91354304549999998" green="0.80974155660000002" blue="0.89804881810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="refButtonTapped:" destination="sA6-S5-Y6f" eventType="touchUpInside" id="ypb-jR-wwp"/>
@@ -727,7 +727,7 @@
                             <constraint firstItem="ix0-MW-MQH" firstAttribute="trailing" secondItem="Yeg-2l-8Fz" secondAttribute="trailing" constant="20" id="9sJ-d5-5I4"/>
                             <constraint firstItem="l2k-vS-A9M" firstAttribute="leading" secondItem="ix0-MW-MQH" secondAttribute="leading" constant="40" id="IL4-Uy-rOI"/>
                             <constraint firstItem="RVu-yv-rPE" firstAttribute="top" secondItem="Yy2-T8-W7C" secondAttribute="top" id="Oze-e2-KHd"/>
-                            <constraint firstItem="l2k-vS-A9M" firstAttribute="top" secondItem="ix0-MW-MQH" secondAttribute="top" constant="20" id="RTU-5f-5ZI"/>
+                            <constraint firstItem="l2k-vS-A9M" firstAttribute="top" secondItem="ix0-MW-MQH" secondAttribute="top" constant="10" id="RTU-5f-5ZI"/>
                             <constraint firstItem="ix0-MW-MQH" firstAttribute="trailing" secondItem="l2k-vS-A9M" secondAttribute="trailing" constant="40" id="TG8-PG-yt2"/>
                             <constraint firstItem="Yeg-2l-8Fz" firstAttribute="leading" secondItem="ix0-MW-MQH" secondAttribute="leading" constant="20" id="evf-eo-P4N"/>
                             <constraint firstItem="RVu-yv-rPE" firstAttribute="leading" secondItem="ix0-MW-MQH" secondAttribute="leading" id="thC-F9-bkq"/>

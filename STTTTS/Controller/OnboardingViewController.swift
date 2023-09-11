@@ -20,7 +20,6 @@ class OnboardingViewController: UIViewController {
         configureUI()
     }
     
-    
     func configureUI() {
         startButton.layer.cornerRadius = 20
         startButton.clipsToBounds = true
@@ -33,9 +32,7 @@ class OnboardingViewController: UIViewController {
         titleLabel.layer.shadowRadius = 4
     }
     
-    
     @IBAction func startButtonTapped(_ sender: UIButton) {
+        
     }
-    
-    
 }

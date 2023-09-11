@@ -79,7 +79,6 @@ class HistoryViewController: UIViewController {
             }
         }
     }
-
 }
 
 extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
@@ -111,7 +110,6 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
 }
 
 extension HistoryViewController {
@@ -123,7 +121,6 @@ extension HistoryViewController {
             detailVC.gptAnswer = selectedHistory.Details.first?.gptAnswer
             detailVC.myQuestion = selectedHistory.Details.first?.myQuestion
             detailVC.createDate = selectedHistory.createDate
-            
             
             self.navigationController?.pushViewController(detailVC, animated: true)
         }
@@ -147,7 +144,8 @@ extension HistoryViewController {
                         }
                     }
                 }
-            } else {
+            }
+            else {
                 print("Could not delete the history because the ID was nil or the user was not logged in")
             }
             completionHandler(true)
@@ -156,5 +154,4 @@ extension HistoryViewController {
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
         return configuration
     }
-
 }

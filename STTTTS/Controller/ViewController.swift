@@ -11,7 +11,6 @@ import AVFAudio
 import Alamofire
 import Firebase
 
-
 class ViewController: UIViewController {
     
     @IBOutlet weak var semiTitleLabel: UILabel!
@@ -24,11 +23,9 @@ class ViewController: UIViewController {
     
     let db = Firestore.firestore()
     
-    
     var resultSentence: String = ""
     var isRecording = false
     var audioData: NSMutableData!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +35,6 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Ask me"
         AudioController.sharedInstance.delegate = self
-
     }
     
     func configureUI() {
@@ -81,7 +77,6 @@ class ViewController: UIViewController {
         chatGptTetxtView.textContainer.lineFragmentPadding = 0
         chatGptTetxtView.layoutIfNeeded()
     }
-    
     
     @IBAction func logoutButtonTapped(_ sender: UIBarButtonItem) {
         

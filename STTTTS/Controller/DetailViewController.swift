@@ -85,7 +85,8 @@ class DetailViewController: UIViewController {
                 dateFormatter.dateFormat = "yyyy-MM-dd"
                 let newDateString = dateFormatter.string(from: date)
                 navigationItem.title = newDateString
-            } else {
+            }
+            else {
                 navigationItem.title = createDate
             }
             
@@ -94,10 +95,10 @@ class DetailViewController: UIViewController {
                 let newDateString2 = dateFormatter2.string(from: date)
                 hourMinuteSecond.text = newDateString2
                 
-            } else {
+            }
+            else {
                 hourMinuteSecond.text = createDate
             }
         }
     }
-
 }

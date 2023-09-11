@@ -22,16 +22,15 @@ class SpeechRecognitionService {
 
   func streamAudioData(_ audioData: NSData, completion: @escaping SpeechRecognitionCompletionHandler) {
     if (!streaming) {
-      // if we aren't already streaming, set up a gRPC connection
       client = Speech(host: "speech.googleapis.com")
-        print("client: \(String(describing: client))")
+      print("client: \(String(describing: client))")
       writer = GRXBufferedPipe()
       call = client.rpcToStreamingRecognize(withRequestsWriter: writer,
                                             eventHandler:
         { (done, response, error) in
                                               completion(response, error as? NSError)
       })
-      // API키
+        
       call.requestHeaders.setObject(NSString(string:"\(Bundle.main.googleSTTKey)"),
                                     forKey:NSString(string:"X-Goog-Api-Key"))
       call.requestHeaders.setObject(NSString(string:Bundle.main.bundleIdentifier!),
@@ -42,11 +41,10 @@ class SpeechRecognitionService {
       call.start()
       streaming = true
 
-      // send an initial request message to configure the service
       let recognitionConfig = RecognitionConfig()
       recognitionConfig.encoding =  .linear16
       recognitionConfig.sampleRateHertz = Int32(sampleRate)
-      recognitionConfig.languageCode = "ko-KR"//"en-US"
+      recognitionConfig.languageCode = "ko-KR"
       recognitionConfig.maxAlternatives = 30
       recognitionConfig.enableWordTimeOffsets = true
 
