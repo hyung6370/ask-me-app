@@ -32,13 +32,13 @@
 - OpenAI(ChatGPT) 기능 (말한 질문에 GPT가 대답해주는 기능)
 - 대화한 기록들을 저장, 조회, 삭제 기능
 
-<br /><br />
+<br />
 
 ### 📌 개발 환경
 - iOS 16.0 +
 - Xcode 14.3
 
-<br /><br />
+<br />
 
 ### 📌 사용 기술 및 라이브러리
 - UIKit
@@ -49,7 +49,7 @@
 - Alamofire
 - MVC Pattern
 
-<br /><br />
+<br />
 
 ### 📌 Reference
 - Image : https://www.freepik.com/free-photo/question-mark-bubble-speech-sign-symbol-icon-3d-rendering_30495106.htm#query=question%20mark&position=13&from_view=search&track=ais
