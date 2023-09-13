@@ -16,13 +16,13 @@
 <br /><hr />
 
 ### 📌 화면 구성📱
-|Onboarding|SignIn|Home|
-|---|---|---|
-|![simulator_screenshot_0A93EDEB-8240-4FB3-860D-0E0C2E9C0200](https://github.com/hyung6370/ask-me-app/assets/81064963/6a723100-8970-46bf-ad5d-eefde6a3e744)|![simulator_screenshot_DE2B1CEE-DAD7-487A-91AD-03DF51539B73](https://github.com/hyung6370/ask-me-app/assets/81064963/cf212a30-59b9-46b4-bbd3-0971dda208e9)|![simulator_screenshot_D514654D-A384-40CF-B5FC-DE6A193A77AE](https://github.com/hyung6370/ask-me-app/assets/81064963/2fc719c4-1bef-42d9-b7e9-bff5bd03dcce)|
 
-|History|Detail|Notice|
-|---|---|---|
-|![simulator_screenshot_3A8F9F88-0448-40A4-B066-B9AE3B2BF2A4](https://github.com/hyung6370/ask-me-app/assets/81064963/e94b831e-65b9-4052-803a-8189e5638529)|![simulator_screenshot_8C2E303A-752C-47B9-A51D-13B9990110B5](https://github.com/hyung6370/ask-me-app/assets/81064963/e4e5239d-8b4f-4ded-bb2e-f8eeafb79f3c)|![simulator_screenshot_1A1BF40D-3663-429C-AE6D-B30FB8535647](https://github.com/hyung6370/ask-me-app/assets/81064963/36c4bd56-464d-48dd-9cba-3298ddc4c18c)|
+<img width="781" alt="스크린샷 2023-09-13 오후 12 43 23" src="https://github.com/hyung6370/ask-me-app/assets/81064963/39540830-4f5a-4e94-a06c-5eaaa32466de">
+
+<br /><br />
+
+<img width="797" alt="스크린샷 2023-09-13 오후 12 43 36" src="https://github.com/hyung6370/ask-me-app/assets/81064963/e14b8a51-3245-45b0-8894-79ed09017a3d">
+
 
 <br /><hr />
 
