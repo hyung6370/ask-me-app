@@ -19,7 +19,7 @@
 
 <img width="781" alt="스크린샷 2023-09-13 오후 12 43 23" src="https://github.com/hyung6370/ask-me-app/assets/81064963/39540830-4f5a-4e94-a06c-5eaaa32466de">
 
-<br /><br />
+<br />
 
 <img width="784" alt="스크린샷 2023-09-13 오후 12 44 49" src="https://github.com/hyung6370/ask-me-app/assets/81064963/3711b3ed-a42a-44c7-9171-9d4e197ae51d">
 
